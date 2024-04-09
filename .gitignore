@@ -1,0 +1,8 @@
+# ignore the virtual environment
+venv/
+
+# all cache directories
+__pycache__/
+
+# large directories
+data/acl/tei.xml/
