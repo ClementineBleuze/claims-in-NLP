@@ -4,5 +4,6 @@ venv/
 # all cache directories
 __pycache__/
 
-# large directories
+# large directories of xml files
 data/acl/tei.xml/
+data/arxiv/tei.xml/
