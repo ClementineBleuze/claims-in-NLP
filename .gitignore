@@ -1,5 +1,5 @@
 # ignore the virtual environment
-venv/
+.venv/
 
 # all cache directories
 __pycache__/
@@ -7,3 +7,7 @@ __pycache__/
 # large directories of xml files
 data/acl/tei.xml/
 data/arxiv/tei.xml/
+
+# large metadata files
+acl-publication-info.74k.v3.full-sections-partial-topic-labels.pkl
+arxiv-metadata-oai-snapshot.json
