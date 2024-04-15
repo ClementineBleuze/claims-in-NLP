@@ -12,3 +12,6 @@ data/arxiv/tei.xml/
 # large metadata files
 acl-publication-info.74k.v3.full-sections-partial-topic-labels.pkl
 arxiv-metadata-oai-snapshot.json
+
+*.pkl
+*.zip
