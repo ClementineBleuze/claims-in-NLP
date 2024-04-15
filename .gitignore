@@ -4,7 +4,8 @@
 # all cache directories
 __pycache__/
 
-# large directories of xml files
+# large directories of pdf/xml files
+data/arxiv/pdf/
 data/acl/tei.xml/
 data/arxiv/tei.xml/
 
