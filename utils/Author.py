@@ -73,6 +73,24 @@ class Author:
         
         self.norm_names = norm_names
 
+    def normalize_str(s:str):
+        """Normalize a string by mapping special characters to their corresponding "basic" characters"""
+        
+        pat1 = re.compile(r"(\{\\textcommabelow\{(.)\}{2})")
+        s = re.sub(pat1, r"\2", s)
+
+        pat2 = re.compile(r"(\{\\?.[\\\{]?(.)\}{1,2})")
+        s = re.sub(pat2, r"\2", s)
+
+        pat3 = re.compile(re.compile(r"\{'\}"))
+        s = re.sub(pat3, "'", s)
+
+        for char in s:
+            if char in Author.SCHAR_MAPPING:
+                s = s.replace(char, Author.SCHAR_MAPPING[char])
+        
+        return s
+
     def same_family_name(self, a2):
         if len(self.norm_names) > 0 and len(a2.norm_names) > 0:
             # we consider equality if the first name is the same
