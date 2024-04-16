@@ -6,7 +6,7 @@ import json
 import xml.etree.ElementTree as ET
 import re
 from typing import List, Tuple
-from nltk.tokenize import sent_tokenize
+import os
 
 class Paper:
     """A class to represent a research paper"""
@@ -89,15 +89,26 @@ class Paper:
                         print(f"Error: check that the metadata dictionary used to build the Paper Object contains the following columns: title, id, authors_parsed, publisher, abstract")
                     
                     # XML files can be named in different ways, depending on their id structure:
-                    # first, we need to know the last version available for each paper
                     versions = json.loads(d["versions"].replace("\'", "\""))
-                    last_version = versions[-1]["version"]
+                    found = False
+                    files = [c.xml_dir_path + "/" + f for f in os.listdir(c.xml_dir_path)]
 
-                    if "." in self.id:
-                        self.xml_path = f"{c.xml_dir_path}/{self.id}{last_version}.grobid.tei.xml"
-                    elif "/" in self.id:
-                        category, id = self.id.split("/")[:2]
-                        self.xml_path = f"{c.xml_dir_path}/{id}{last_version}.grobid.tei.xml"
+                    for v in versions[::-1]:
+
+                        if "." in self.id:
+                            path = f"{c.xml_dir_path}/{self.id}{v['version']}.grobid.tei.xml"
+                        elif "/" in self.id:
+                            category, id = self.id.split("/")[:2]
+                            path = f"{c.xml_dir_path}/{id}{v['version']}.grobid.tei.xml"
+
+                        if path in files:
+                            self.xml_path = path
+                            found = True
+                            break
+                            
+                    if not found:
+                        self.init_error = "FileNotFoundError: XML file does not exist"
+                        return
 
             # Other corpus       
             else:
@@ -155,7 +166,7 @@ class Paper:
         found_abstract = False
 
         if abstract is not None: # case where the abstract is already known from the metadata
-            abs_sentences = sent_tokenize(abstract)
+            abs_sentences = list(self.corpus.model(abstract).sents)
             found_abstract = len(abs_sentences) > 0
 
         if not found_abstract: # cases when the abstract was not provided in the metadata file, but we try to find it in the XML file
@@ -165,19 +176,19 @@ class Paper:
                         if "abstract" in d.tag:
                             if len(d) > 0: #d[0] is the abstract div
                                 if d[0].text: # abstract div
-                                    abs_sentences = sent_tokenize(d[0].text)
+                                    abs_sentences = list(self.corpus.model(d[0].text).sents)
                                     found_abstract = len(abs_sentences) > 0
                                     break
 
                                 elif len(d[0]) > 0: # get all paragraphs
                                     text = "\n".join([c.text for c in d[0][1:]])
-                                    abs_sentences = sent_tokenize(text)
+                                    abs_sentences = list(self.corpus.model(text).sents)
                                     found_abstract = len(abs_sentences) > 0
                                     break
             
         if found_abstract:
             for i, sentence in enumerate(abs_sentences):
-                content.append({"id": i, "sentence": Paper.clean_text(sentence), "section": "abstract"})
+                content.append({"id": i, "sentence": Paper.clean_text(str(sentence)), "section": "abstract"})
             nb_sentences += len(abs_sentences)
         else:
             error = "Parsing error: no abstract found"
@@ -208,9 +219,10 @@ class Paper:
                                 header = "unidentified-section"
 
                             # split the content into sentences
-                            sentences = sent_tokenize(text)
+                            sentences = list(self.corpus.model(text).sents)
 
                             for i, sentence in enumerate(sentences):
+                                sentence = str(sentence)
                                 if Paper.is_acceptable_sentence(sentence):
                                     content.append({"id": nb_sentences, "sentence": Paper.clean_text(sentence), "section": header})
                                     nb_sentences += 1
