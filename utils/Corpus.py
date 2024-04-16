@@ -2,6 +2,7 @@ from collections import Counter
 import pandas as pd
 import tqdm
 import utils.Paper
+import spacy
 
 class Corpus:
 
@@ -10,10 +11,29 @@ class Corpus:
         self.name = name # name of the corpus (str: ACL or arXiv)
         self.xml_dir_path = xml_dir_path # path to the directory containing the XML files of the corpus papers(str)
         self.metadata_path = metadata_path # path to the metadata file of the corpus (str)
+        self.model = Corpus.init_spacy_model() # spacy model for NLP processing
 
         self.papers = [] # list of Paper objects (will be populated using the load_papers method)
         self.papers_with_errors = [] # list of Paper objects that could not be loaded
 
+    def init_spacy_model():
+        """Initialize the spacy model for NLP processing"""
+        nlp = spacy.load("en_core_web_sm")
+
+        # remove the default prefix and suffix regexes to allow for the use of square brackets in the text
+        # avoid wrong sentence segmentation because of reference format
+        prefixes = list(nlp.Defaults.prefixes)
+        prefixes.remove("\[")
+        prefix_regex = spacy.util.compile_prefix_regex(prefixes)
+        nlp.tokenizer.prefix_search = prefix_regex.search
+
+        suffixes = list(nlp.Defaults.suffixes)
+        suffixes.remove("\]")
+        suffix_regex = spacy.util.compile_suffix_regex(suffixes)
+        nlp.tokenizer.suffix_search = suffix_regex.search
+
+        return nlp
+    
     def get_paper_by_id(self, id:str):
         """Get a paper by its id"""
         # we assume that the id is unique
