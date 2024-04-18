@@ -1,0 +1,41 @@
+[  {
+  "id": 2164,
+  "text": "NC",
+  "prefixKey": null,
+  "suffixKey": "0",
+  "backgroundColor": "#9F0500",
+  "textColor": "#ffffff"
+  },
+  {
+    "id": 1006,
+    "text": "POS",
+    "prefixKey": null,
+    "suffixKey": "1",
+    "backgroundColor": "#A4DD00",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 1007,
+    "text": "NEG",
+    "prefixKey": null,
+    "suffixKey": "2",
+    "backgroundColor": "#F44E3B",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 1008,
+    "text": "FACT",
+    "prefixKey": null,
+    "suffixKey": "3",
+    "backgroundColor": "#0062B1",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 1009,
+    "text": "PROSP",
+    "prefixKey": null,
+    "suffixKey": "4",
+    "backgroundColor": "#FA28FF",
+    "textColor": "#ffffff"
+  }
+]
