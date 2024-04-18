@@ -75,7 +75,7 @@ class Paper:
                 if d is not None:
                     try:
                         self.title = d["title"]
-                        self.id = d["id"]
+                        self.id = str(d["id"])
                         self.authors = self.extract_authors_from_str(d["authors_parsed"])
                         self.publisher = None
                         self.abstract = d["abstract"]
