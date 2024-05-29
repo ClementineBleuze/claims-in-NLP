@@ -19,6 +19,7 @@ df = pd.read_csv("../data/arxiv/arxiv-metadata-nlp-unpublished.csv", encoding = 
 print(f"{len(df[df['pdf_stored'] == False])} pdf files to download")
 
 for i in tqdm.tqdm(range(df.shape[0])):
+# for i, id in tqdm.tqdm(enumerate(error_ids), total = len(error_ids)):
 
     # skip if the pdf has already been stored
     if df.loc[i, "pdf_stored"] == True:
@@ -31,12 +32,18 @@ for i in tqdm.tqdm(range(df.shape[0])):
     if full_id in error_ids or "0"+full_id in error_ids:
         continue
 
-     # depending on the id format, the pdf file will be named differently
+    # depending on the id format, the pdf file will be named differently
     if "." in full_id:
-        date_code = full_id.split(".")[0]
-        if len(date_code) == 3:
+        date_code, id_code = full_id.split(".")
+
+        while len(date_code) < 4:
             date_code = "0" + date_code
-            full_id = "0" + full_id
+        
+        # while len(id_code) < 4: ## NOT THE SAME ARTICLES !!!!
+        #     id_code = "0" + id_code
+
+        full_id = date_code + "." + id_code
+
         pdf_path= f"gs://arxiv-dataset/arxiv/arxiv/pdf/{str(date_code)}/{str(full_id)}"
 
     elif "/" in full_id:
@@ -62,14 +69,16 @@ for i in tqdm.tqdm(range(df.shape[0])):
 
         if res_code == 0:
             df.at[i, "pdf_stored"] = True
+            df.to_csv("../data/arxiv/arxiv-metadata-nlp-unpublished.csv", index=False, encoding = "utf-8")
+
             break
     
     # if the pdf file has not been found, we store the error
-    if res_code == 1:
-        with open(error_path, "a") as f:
-            f.write(f"{full_id}, failed: no PDF available \n")
+    # if res_code == 1:
+    #     with open(error_path, "a") as f:
+    #         f.write(f"{full_id}, failed: no PDF available \n")
     
     # save the updated metadata regularly
-    if i % 100 == 0:
-        df.to_csv("../data/arxiv/arxiv-metadata-nlp-unpublished.csv", index=False, encoding = "utf-8")
+    #if i % 100 == 0:
+    #df.to_csv("../data/arxiv/arxiv-metadata-nlp-unpublished.csv", index=False, encoding = "utf-8")
 
