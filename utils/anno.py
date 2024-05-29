@@ -42,6 +42,7 @@ class AnnotationSet:
 
 
         self.load_annotations()
+        #self.compute_agreement_metrics()
         self.make_stats()
 
     def compute_agreement_metrics(self):
@@ -56,22 +57,34 @@ class AnnotationSet:
         
         ## Load the different annotation files
         # admin file
-        frames.append((pd.read_csv(self.anno_dir + "admin.csv")[["doccano_art_id", "sentence_id", "text", "current_sentence_section", "previous_sentence_section", "previous_sentence", "next_sentence_section", "next_sentence"]]))
+        try:
+            frames.append((pd.read_csv(self.anno_dir + "admin.csv")[["id", "text", "current_sentence_section", "previous_sentence_section", "previous_sentence", "next_sentence_section", "next_sentence"]]))
+        except:
+            try:
+                frames.append((pd.read_csv(self.anno_dir + "admin.csv")[["idx", "text", "sec", "prev_sec", "prev_sent", "next_sec", "next_sent"]]))
+            except:
+                df = pd.read_csv(self.anno_dir + "admin.csv")[["id", "text", "prev_text", "prev_section", "next_text", "next_section"]]
+                df = df.rename(columns={"id":"idx"})
+                frames.append(df)
+
 
         for anno in self.task.annotators:
             anno_file = anno + ".csv"
             df = pd.read_csv(self.anno_dir + anno_file)[["label", "Comments"]].astype(str)
-            ## replace nan values by "NC" (No Claim)
-            #df["label"] = df["label"].apply(lambda x: "NC" if x == "nan" else x)
+            # if multiple labels include NC, map to NC
+            df["label"] = df["label"].apply(lambda x: "NC" if "NC" in x.split("#") else x)
+            df["label"] = df["label"].apply(lambda x: "NC" if x == "nan" else x)
+            df["Comments"] = df["Comments"].apply(lambda x: "" if x == "nan" else x)
+
             df = df.rename(columns={"label": f"label_{anno}", "Comments": f"comments_{anno}"})
             frames.append(df)
 
         # merge all dataframes
         df = pd.concat(frames, axis=1)
-        for col in df.columns:
-            if col.startswith("label") or col.startswith("comments"):
-                df[col] = df[col].astype(str)
-                df[col] = df[col].replace("nan", "")
+        # for col in df.columns:
+        #     if col.startswith("label") or col.startswith("comments"):
+        #         df[col] = df[col].astype(str)
+        #         df[col] = df[col].replace("nan", "NC")
 
         self.annotations = df
     
@@ -97,8 +110,8 @@ class AnnotationSet:
                         continue
 
                     # get the labels for the two annotators
-                    labels_anno1 = self.annotations.loc[idx, f"label_{anno1}"].values
-                    labels_anno2 = self.annotations.loc[idx, f"label_{anno2}"].values
+                    labels_anno1 = self.annotations.loc[idx, f"label_{anno1}"].values.astype(str).tolist()
+                    labels_anno2 = self.annotations.loc[idx, f"label_{anno2}"].values.astype(str).tolist()
 
                     # compute the Cohen's Kappa score
                     agreement = cohen_kappa_score(labels_anno1, labels_anno2)
@@ -118,7 +131,8 @@ class AnnotationSet:
 
         data = []
         for i, row in self.annotations.iterrows():
-            doc = str(row["doccano_art_id"]) + "-" + str(row["sentence_id"])
+            #doc = str(row["doccano_art_id"]) + "-" + str(row["sentence_id"])
+            doc = row["idx"]
             for anno in self.task.annotators:
 
                 if split_multi_labels:
@@ -334,9 +348,12 @@ class AnnotationSet:
         columns =  self.task.labels + ['total'] + [f"{l}_rr" for l in self.task.labels] + ['completion_r']
         self.stats = pd.DataFrame(stats, columns=columns, index=self.task.annotators)
 
-    def get_ambiguous_annotations(self):
+    def get_ambiguous_annotations(self, anno_list = None):
         """A method that returns all ambiguous annotations, that is, those which have been commented by one or more user,
         or those where at least two annotators disagree on the correct label"""
+        if anno_list is None:
+            anno_list = self.task.annotators
+
         df = self.annotations
 
         # different annotations
@@ -344,7 +361,7 @@ class AnnotationSet:
             all_labels = []
             all_comments = []
 
-            for anno in self.task.annotators:
+            for anno in anno_list:
 
                 labels= df.at[i, f"label_{anno}"]
                 if labels != "":
@@ -373,5 +390,23 @@ class AnnotationSet:
 
         return df[(df["agreement"] == False) | (df["commented"] == True)]
 
+    def get_consensual_annotations(self):
+        """Return the annotations where there is a strict majority to agree on a given label."""
+
+        data = []
+        for i, row in self.annotations.iterrows():
+            labels = [row[f"label_{anno}"] for anno in self.task.annotators]
+            # sort by counts
+            count = Counter(labels)
+            labels_count = [(k, v) for k, v in sorted(count.items(), key = lambda item: item[1], reverse = True)]
+
+            if len(labels_count) == 1: # all annotators agree
+                data.append([row["idx"], row["text"], labels[0]])
+
+            elif labels_count[0][1] > labels_count[1][1]: # there is a strict majority
+                data.append([row["idx"], row["text"], labels_count[0][0]])
+
+        df = pd.DataFrame(data, columns = ["idx", "text", "label"])
+        return df
 
 

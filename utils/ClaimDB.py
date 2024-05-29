@@ -44,6 +44,7 @@ class ClaimDB:
                     data.append({
                         "corpus": corpus.name,
                         "paper_id": paper.id,
+                        "year" : paper.year,
                         "sentence_id": candidate["id"],
                         "sentence": candidate["sentence"],
                         "section": candidate["section"],
@@ -51,14 +52,90 @@ class ClaimDB:
 
         df = pd.DataFrame(data)
         df["idx"] = df.index
-        df = df[["idx", "corpus", "paper_id", "sentence_id", "sentence", "section"]]
+        df = df[["idx", "corpus", "paper_id", "year", "sentence_id", "sentence", "section"]]
     
-        idx_map = {idx: (row["corpus"], row["paper_id"], row["sentence_id"]) for idx, row in df.iterrows()}
+        idx2coord = {idx: (row["corpus"], row["paper_id"], row["sentence_id"]) for idx, row in df.iterrows()}
 
-        return df, idx_map
+        return df, idx2coord
+
+    def get_candidate_by_id(self, id:int):
+        return self.candidates.loc[id]
     
-    def prepare_for_doccano_format(df:pd.DataFrame)-> pd.DataFrame:
-        pass
+    def get_candidates_by_paper_id(self, paper_id:str, corpus_name:str):
+        coord2idx = {v:k for k,v in self.idx_map.items()}
+
+        # get the paper
+        c = self.get_corpus_by_name(corpus_name)
+        p = c.get_paper_by_id(paper_id)
+
+        paper_cands = p.content[p.content["candidate"] == True]
+        paper_cands_idx = [coord2idx[(corpus_name, paper_id, i)] for i in paper_cands.index]
+
+        return self.candidates.loc[paper_cands_idx]
+        
+    
+    def get_corpus_by_name(self, name:str)->Corpus:
+        for corpus in self.corpora:
+            if corpus.name == name:
+                return corpus
+        return None
+    
+    def prepare_for_doccano_format(self, df:pd.DataFrame)-> pd.DataFrame:
+        """A function to prepare a dataframe of sentences for Doccano format
+        - df : a pandas DataFrame with columns {corpus, paper_id, sentence_id, sentence, section}"""
+
+        data = []
+        coord2idx = {v:k for k,v in self.idx_map.items()}
+
+
+        for i, row in df.iterrows():
+            c = self.get_corpus_by_name(row["corpus"])
+            p = c.get_paper_by_id(row["paper_id"])
+
+            idx = coord2idx[(c.name, p.id, row["sentence_id"])]
+            text = row["sentence"]
+            sec = row["section"]
+
+            prev_sent_id = int(row["sentence_id"]) - 1
+            next_sent_id = int(row["sentence_id"]) + 1
+
+            # get previous sentence
+            if prev_sent_id in p.content["id"].values:
+                prev_doc = p.content.loc[prev_sent_id]
+                prev_text = prev_doc["sentence"]
+                prev_sec = prev_doc["section"]
+
+            else:
+                prev_text = ""
+                prev_sec = ""
+
+            # get next sentence
+            if next_sent_id in p.content["id"].values:
+                next_doc = p.content.loc[next_sent_id]
+                next_text = next_doc["sentence"]
+                next_sec = next_doc["section"]
+            
+            else:
+                next_text = ""
+                next_sec = ""
+
+            data.append({
+                "text": text,
+                "doc_id": idx,
+                "paper_title" : p.title,
+                "year": p.year,
+                "section": sec,
+                "prev_text": prev_text,
+                "prev_section": prev_sec,
+                "next_text": next_text,
+                "next_section": next_sec,
+                "label": ""
+            })
+
+        df_doccano = pd.DataFrame(data)
+        df_doccano["label"] = "" * df_doccano.shape[0]
+
+        return df_doccano
 
     def draw_random_idx_from_corpus(self, corpus:str, n:int)->List[str]:
         # get all the possible indexes to choose from

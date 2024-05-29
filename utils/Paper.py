@@ -12,16 +12,13 @@ class Paper:
     """A class to represent a research paper"""
 
     # keywords (or subwords) that are indicative of a section containing claims
-    CAND_SECTIONS = ["introduction", "motivation", "contribution", "result", "finding", "analysis", "observation"
+    CAND_SECTIONS = ["introduction", "motivation", "contribution", "result", "score", "finding", "analysis", "observation"
                  "evaluation", "perform", "conclusion", "discussion", "limit", "ethic", "challenge", "future", 
                  "inter-annotator", "impact", "directions", "comparison"]
     
     # keywords (or subwords) that are indicative of a section not containing claims
-    NON_CAND_SECTIONS = ["related", "prior", "study", "studies", "background", "overview", "state-of-the-art",
-                     "algorithm", "method", "model", "setup", "setting", "experiment", "parameter", "hyperparameter",
-                     "task", "training", "architecture", "implement", "corpus", "corpora", "data", "description",
-                     "definition", "feature", "example", "acknowledgement", "reference", "appendix", "supplement", 
-                     "problem", "process", "framework", "current", "tuning"]
+    NON_CAND_SECTIONS = ["related ", "prior", "background", "overview", "method", "setup", "setting", "parameter", "hyperparameter",
+                     "training data", "validation data", "implement", "data", "example", "acknowledgement","appendix", "supplement", ]
 
     def __init__(self, d: dict = None, c = None):
         """Initialize the paper from a metadata dictionary and a corpus object"""

@@ -6,6 +6,7 @@ doccano_art_id,sentence_id,text,label
 0,5,"Therefore, most data collections contain a very large number of different glosses with very few repetitions of each.",NC
 0,6,This characteristic makes it very unlikely for these datasets to be used as training sets for classification algorithms in sign recognition level.,NC
 0,7,"Thus, we developed a system in the direction of ""phonological"" features recognition.",FACT
+0,8,"This way we can extract a dataset with a lot of examples for every handshape, palm orientation and hand location out of the video collections.",POS
 0,22,"OpenPose is a software freely distributed by Carnegie Melon University, Perceptual Computing Lab (Cao et al., 2018).",NC
 0,23,It is used as a tool of human body keypoints extraction from a single image or video frame.,NC
 0,24,"It offers an estimation of 25 body/foot keypoints, 2x21 hand keypoints and 70 face keypoints.",NC
@@ -36,8 +37,11 @@ doccano_art_id,sentence_id,text,label
 1,20,"As a result, even in the contexts where ""record"" is used with different parts-of-speech, the Chinese word ""记录"" will be used, although the word order will change.",NC
 1,21,"These facts might result in an incorrect connection of ""[X1] enregistrer [X2]"" and ""[X2] [X1] 记录"" even though proper correspondence of ""[X1] enregistrer [X2]"" and ""[X1] dossier [X2]"" would be ""[X1] 记 录 [X2]"" and ""[X2] [X1] 记 录"".",NC
 1,22,"Hence a superficial phrase matching method based solely on the surface form of the pivot will often combine incorrect phrase pairs, causing translation errors if their translation scores are estimated to be higher than the proper correspondences.",NC
+1,23,"Given this background, we hypothesize that disambiguation of these cases would be easier if the necessary syntactic information such as phrase structures are considered during pivoting.",POS
 1,24,"To incorporate this intuition into our models, we propose a method that considers syntactic information of the pivot phrase, as shown in Figure 1  (b).",FACT
 1,25,"In this way, the model will distinguish translation rules extracted in contexts in which the English symbol string ""[X1] record [X2]"" behaves as a verbal phrase, from contexts in which the same string acts as nominal phrase.",POS
+1,26,"Specifically, we propose a method based on Synchronous Context-Free Grammars (SCFGs) (Aho and Ullman, 1969;Chiang, 2007), which are widely used in tree-based machine translation frameworks ( §2).",FACT
+1,27,"After describing the baseline triangulation method ( §3), which uses only the surface forms for performing triangulation, we propose two methods for triangulation based on syntactic matching ( §4).",NC
 1,28,"The first places a hard restriction on exact matching of parse trees ( §4.1) included in translation rules, while the second places a softer restriction allowing partial matches ( §4.2).",NC
 1,31,"In this section, first we cover SCFGs, which are widely used in machine translation, particularly hierarchical phrase-based translation (Hiero) (Chiang, 2007).",NC
 1,32,"In SCFGs, the elementary structures used in translation are synchronous rewrite rules with aligned pairs of source and target symbols on the right-hand side: X → ⟨ s, t ⟩ (1) where X is the head symbol of the rewrite rule, and s and t are both strings of terminals and nonterminals on the source and target side respectively.",NC
@@ -46,6 +50,7 @@ doccano_art_id,sentence_id,text,label
 1,35,Synchronous rules can be extracted based on parallel sentences and automatically obtained word alignments.,NC
 1,36,"Each extracted rule is scored with phrase translation probabilities in both directions ϕ(s|t) and ϕ(t|s), lexical translation probabilities in both directions ϕ lex (s|t) and ϕ lex (t|s), a word penalty counting the terminals in t, and a constant phrase penalty of 1.",NC
 1,37,"At translation time, the decoder searches for the target sentence that maximizes the derivation probability, which is defined as the sum of the scores of the rules used in the derivation, and the log of the language model (LM) probability over the target strings.",NC
+1,38,"When not considering an LM, it is possible to efficiently find the best translation for an input sentence using the CKY+ algorithm (Chappelier et al., 1998).",NC
 1,39,"When using an LM, the expanded search space is further reduced based on a limit on expanded edges, or total states per span, through a procedure such as cube pruning (Chiang, 2007).",NC
 1,40,"In this section, we specifically cover the rules used in Hiero.",NC
 1,41,"Hierarchical rules are composed of initial head symbol S, and synchronous rules containing terminals and single kind of non-terminals X.",NC
@@ -57,8 +62,6 @@ doccano_art_id,sentence_id,text,label
 1,47,"Taking the example of tree-to-string (T2S) rules, these use parse trees on the source language side, and the head symbols of the synchronous rules are not limited to S or X, but instead use non-terminal symbols corresponding to the phrase structure tags of a given parse tree.",NC
 1,48,"For example, T2S rules could take the form of: X NP → ⟨(NP (NNS Officers)), 主席团 成員⟩ (6) X NP → ⟨(NP (DT the) (NNP Committee)), 委员会⟩ (7) X PP → ⟨ (PP (IN of) X NP,0 ), X0 的 ⟩ (8) X NP → ⟨ (NP X NP,0 X PP,1 ), X1 X0 ⟩ .",NC
 1,49,"Here, parse subtrees of the source language rules are given in the form of S-expressions.",NC
-1,50,"From these rules, we can translate from the parse tree of the input sentence by derivation: X ROOT → ⟨ X NP,0 , X0 ⟩ ⇒ ⟨ (NP X NP,1 X PP,2 ), X2 X1 ⟩ ⇒ ⟨ (NP (NP (NNS Officers) X PP,2 )), X2 主席团 成員 ⟩ * ⇒ ⟨ (NP (NP (NNS Officers)) (PP (IN of) (NP (DT the) (NNP Committee)))) , 委员会 的 主席团 成員 ⟩ In this way, it is possible in T2S translation to obtain a result conforming to the source language's grammar.",NC
-1,51,"This method also has the advantage the number of less-useful synchronous rules extracted by syntax-agnostic methods such as Hiero are reduced, making it possible to learn more compact rule tables and allowing for faster translation.",NC
 1,59,"In the previous section, we explained about the standard triangulation method and mentioned that the pivot-side ambiguity causes incorrect estimation of translation probability and the translation accuracy might decrease.",NC
 1,61,"In the following two sections, we describe two methods to distinguish pivot phrases that have syntactically different roles, one based on exact matching of parse trees, and one based on soft matching.",NC
 1,62,"In the exact matching method, we first train pivotsource and pivot-target T2S TMs by parsing the pivot side of parallel corpora, and store them into rule tables as T P S and T P T respectively.",NC
@@ -85,10 +88,11 @@ doccano_art_id,sentence_id,text,label
 1,102,We show an example of a translated sentences for which pivot-side ambiguity is resolved in the the syntactic matching methods:,NC
 1,107,"Recent results (Firat et al., 2016;Johnson et al., 2016) have found that neural machine translation systems can gain the ability to perform translation with zero parallel resources by training on multiple sets of bilingual data.",NC
 1,108,"However, previous work has not examined the competitiveness of these methods with pivot-based symbolic SMT frameworks such as PBMT or Hiero.",NC
-1,109,"In this section, we compare a zero-shot NMT model (detailed parameters in  Johnson et al.",NC
 1,110,"To train and evaluate NMT models, we adopt NMTKit.",NC
 1,111,"7 From the results we see the tendency of NMT that directly trained model achieves high translation accuracy even for translation between languages of different families, on the other hand, the accuracy is drastically reduced in the situation when there is no sourcetarget parallel corpora for training.",POS
+1,112,"Cascade is one immediate method connecting two TMs, and NMT cascade translation shows the medium performance in this experiment.",POS
 1,113,"In our setting, while bilingually trained NMT systems were competitive or outperformed Hiero-based models, zeroshot translation is uniformly weaker.",POS
+1,114,"This may be because we used only 1 LSTM layer for encoder/decoder, or because the amount of parallel corpora or language pairs were not sufficient.",NEG
 1,115,"Thus, we can posit that while zero-shot translation has demonstrated reasonable results in some settings, successful zero-shot translation systems are far from trivial to build, and pivot-based symbolic MT systems such as PBMT or Hiero may still be a competitive alternative.",POS
 1,116,"In this paper, we have proposed a method of pivot translation using triangulation with exact or partial matching method of pivot-side parse subtrees.",FACT
 1,117,"In experiments, we found that these triangulated models are effective in particular when allowing partial matching.",POS

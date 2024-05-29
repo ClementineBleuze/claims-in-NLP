@@ -1,0 +1,2076 @@
+id,text,doc_id,paper_title,paper_structure,year,prev_text,prev_section,next_text,next_section,label,Comments
+46425,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+0. abstract -- 1/6
+==========================================================================================
+Question Answering (QA) is in increasing demand as the amount of information available online and the desire for quick access to this content grows.",457835,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,,,A common approach to QA has been to fine-tune a pretrained language model on a task-specific labeled dataset.,abstract,context-AIC,
+46426,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+0. abstract -- 2/6
+==========================================================================================
+A common approach to QA has been to fine-tune a pretrained language model on a task-specific labeled dataset.",457836,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Question Answering (QA) is in increasing demand as the amount of information available online and the desire for quick access to this content grows.,abstract,"This paradigm, however, relies on scarce, and costly to obtain, large-scale human-labeled data.",abstract,context-AIC,
+46427,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+0. abstract -- 3/6
+==========================================================================================
+This paradigm, however, relies on scarce, and costly to obtain, large-scale human-labeled data.",457837,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,A common approach to QA has been to fine-tune a pretrained language model on a task-specific labeled dataset.,abstract,We propose an unsupervised approach to training QA models with generated pseudotraining data.,abstract,context-AIC,
+46428,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+0. abstract -- 4/6
+==========================================================================================
+We propose an unsupervised approach to training QA models with generated pseudotraining data.",457838,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"This paradigm, however, relies on scarce, and costly to obtain, large-scale human-labeled data.",abstract,"We show that generating questions for QA training by applying a simple template on a related, retrieved sentence rather than the original context sentence improves downstream QA performance by allowing the model to learn more complex context-question relationships.",abstract,contribution-AIC,
+46429,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+0. abstract -- 5/6
+==========================================================================================
+We show that generating questions for QA training by applying a simple template on a related, retrieved sentence rather than the original context sentence improves downstream QA performance by allowing the model to learn more complex context-question relationships.",457839,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We propose an unsupervised approach to training QA models with generated pseudotraining data.,abstract,"Training a QA model on this data gives a relative improvement over a previous unsupervised model in F1 score on the SQuAD dataset by about 14%, and 20% when the answer is a named entity, achieving stateof-the-art performance on SQuAD for unsupervised QA.",abstract,result,
+46430,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+0. abstract -- 6/6
+==========================================================================================
+Training a QA model on this data gives a relative improvement over a previous unsupervised model in F1 score on the SQuAD dataset by about 14%, and 20% when the answer is a named entity, achieving stateof-the-art performance on SQuAD for unsupervised QA.",457840,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We show that generating questions for QA training by applying a simple template on a related, retrieved sentence rather than the original context sentence improves downstream QA performance by allowing the model to learn more complex context-question relationships.",abstract,Question Answering aims to answer a question based on a given knowledge source.,Introduction,result,
+46431,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 1/40
+==========================================================================================
+Question Answering aims to answer a question based on a given knowledge source.",457841,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Training a QA model on this data gives a relative improvement over a previous unsupervised model in F1 score on the SQuAD dataset by about 14%, and 20% when the answer is a named entity, achieving stateof-the-art performance on SQuAD for unsupervised QA.",abstract,"Recent advances have driven the performance of QA systems to above or near-human performance on QA datasets such as SQuAD (Rajpurkar et al., 2016) and Natural Questions (Kwiatkowski et al., 2019) thanks to pretrained language models such as BERT (Devlin et al., 2019), XLNet (Yang et al., 2019) and RoBERTa (Liu et al., 2019).",Introduction,context-AIC,
+46432,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 2/40
+==========================================================================================
+Recent advances have driven the performance of QA systems to above or near-human performance on QA datasets such as SQuAD (Rajpurkar et al., 2016) and Natural Questions (Kwiatkowski et al., 2019) thanks to pretrained language models such as BERT (Devlin et al., 2019), XLNet (Yang et al., 2019) and RoBERTa (Liu et al., 2019).",457842,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Question Answering aims to answer a question based on a given knowledge source.,Introduction,"Fine-tuning these language models, however, requires largescale data for fine-tuning.",Introduction,context-AIC#rw,
+46433,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 3/40
+==========================================================================================
+Fine-tuning these language models, however, requires largescale data for fine-tuning.",457843,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Recent advances have driven the performance of QA systems to above or near-human performance on QA datasets such as SQuAD (Rajpurkar et al., 2016) and Natural Questions (Kwiatkowski et al., 2019) thanks to pretrained language models such as BERT (Devlin et al., 2019), XLNet (Yang et al., 2019) and RoBERTa (Liu et al., 2019).",Introduction,Creating a dataset for every new domain is extremely costly and practically infeasible.,Introduction,context-AIC,
+46434,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 4/40
+==========================================================================================
+Creating a dataset for every new domain is extremely costly and practically infeasible.",457844,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Fine-tuning these language models, however, requires largescale data for fine-tuning.",Introduction,The ability to apply QA models on outof-domain data in an efficient manner is thus very 1 Equal contribution 2 Work done during internship at the AWS AI Labs desirable.,Introduction,context-AIC,
+46435,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 5/40
+==========================================================================================
+The ability to apply QA models on outof-domain data in an efficient manner is thus very 1 Equal contribution 2 Work done during internship at the AWS AI Labs desirable.",457845,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Creating a dataset for every new domain is extremely costly and practically infeasible.,Introduction,"This problem may be approached with domain adaptation or transfer learning techniques (Chung et al., 2018) as well as data augmentation (Yang et al., 2017;Dhingra et al., 2018;Wang et al., 2018;Alberti et al., 2019).",Introduction,context-AIC#rw,
+46436,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 6/40
+==========================================================================================
+This problem may be approached with domain adaptation or transfer learning techniques (Chung et al., 2018) as well as data augmentation (Yang et al., 2017;Dhingra et al., 2018;Wang et al., 2018;Alberti et al., 2019).",457846,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,The ability to apply QA models on outof-domain data in an efficient manner is thus very 1 Equal contribution 2 Work done during internship at the AWS AI Labs desirable.,Introduction,"However, here we expand upon the recently introduced task of unsupervised question answering (Lewis et al., 2019) to examine the extent to which synthetic training data alone can be used to train a QA model. ",Introduction,context-AIC#rw,
+46437,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 7/40
+==========================================================================================
+However, here we expand upon the recently introduced task of unsupervised question answering (Lewis et al., 2019) to examine the extent to which synthetic training data alone can be used to train a QA model. ",457847,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"This problem may be approached with domain adaptation or transfer learning techniques (Chung et al., 2018) as well as data augmentation (Yang et al., 2017;Dhingra et al., 2018;Wang et al., 2018;Alberti et al., 2019).",Introduction,"In particular, we focus on the machine reading comprehension setting in which the context is a given paragraph, and the QA model can only access this paragraph to answer a question.",Introduction,contribution-AIC#rw,
+46438,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 8/40
+==========================================================================================
+In particular, we focus on the machine reading comprehension setting in which the context is a given paragraph, and the QA model can only access this paragraph to answer a question.",457848,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"However, here we expand upon the recently introduced task of unsupervised question answering (Lewis et al., 2019) to examine the extent to which synthetic training data alone can be used to train a QA model. ",Introduction,"Furthermore, we work on extractive QA, where the answer is assumed to be a contiguous sub-string of the context.",Introduction,contribution-AIC,
+46439,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 9/40
+==========================================================================================
+Furthermore, we work on extractive QA, where the answer is assumed to be a contiguous sub-string of the context.",457849,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"In particular, we focus on the machine reading comprehension setting in which the context is a given paragraph, and the QA model can only access this paragraph to answer a question.",Introduction,"A training instance for supervised reading comprehension consists of three components: a question, a context, and an answer.",Introduction,contribution-AIC,
+46440,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 10/40
+==========================================================================================
+A training instance for supervised reading comprehension consists of three components: a question, a context, and an answer.",457850,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Furthermore, we work on extractive QA, where the answer is assumed to be a contiguous sub-string of the context.",Introduction,"For a given dataset domain, a collection of documents can usually be easily obtained, providing context in the form of paragraphs or sets of sentences.",Introduction,context-AIC,
+46441,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 11/40
+==========================================================================================
+For a given dataset domain, a collection of documents can usually be easily obtained, providing context in the form of paragraphs or sets of sentences.",457851,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"A training instance for supervised reading comprehension consists of three components: a question, a context, and an answer.",Introduction,Answers can be gathered from keywords and phrases from the context.,Introduction,context-AIC,
+46442,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 12/40
+==========================================================================================
+Answers can be gathered from keywords and phrases from the context.",457852,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"For a given dataset domain, a collection of documents can usually be easily obtained, providing context in the form of paragraphs or sets of sentences.",Introduction,We focus mainly on factoid QA; the question concerns a concise fact.,Introduction,context-AIC,
+46443,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 13/40
+==========================================================================================
+We focus mainly on factoid QA; the question concerns a concise fact.",457853,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Answers can be gathered from keywords and phrases from the context.,Introduction,"In particular, we emphasize questions whose answers are named entities, the majority type of factoid questions.",Introduction,contribution-AIC,
+46444,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 14/40
+==========================================================================================
+In particular, we emphasize questions whose answers are named entities, the majority type of factoid questions.",457854,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We focus mainly on factoid QA; the question concerns a concise fact.,Introduction,Entities can be extracted from text using named entity recognition (NER) techniques as the training instance's answer.,Introduction,contribution-AIC,
+46445,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 15/40
+==========================================================================================
+Entities can be extracted from text using named entity recognition (NER) techniques as the training instance's answer.",457855,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"In particular, we emphasize questions whose answers are named entities, the majority type of factoid questions.",Introduction,"Thus, the main challenge, and the focus of this paper, is creating a relevant question from a (context, answer) pair in an unsupervised manner. ",Introduction,context-AIC,
+46446,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 16/40
+==========================================================================================
+Thus, the main challenge, and the focus of this paper, is creating a relevant question from a (context, answer) pair in an unsupervised manner. ",457856,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Entities can be extracted from text using named entity recognition (NER) techniques as the training instance's answer.,Introduction,"Recent work of (Lewis et al., 2019) uses style transfer for generating questions for (context, answer) pairs but shows little improvement over applying a much simpler question generator which drops, permutates and masks words.",Introduction,contribution-AIC,
+46447,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 17/40
+==========================================================================================
+Recent work of (Lewis et al., 2019) uses style transfer for generating questions for (context, answer) pairs but shows little improvement over applying a much simpler question generator which drops, permutates and masks words.",457857,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Thus, the main challenge, and the focus of this paper, is creating a relevant question from a (context, answer) pair in an unsupervised manner. ",Introduction,"We improve upon this paper by proposing a simple, intuitive, retrieval and template-based question generation approach, illustrated in Figure 1.",Introduction,context-AIC#rw,
+46448,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 18/40
+==========================================================================================
+We improve upon this paper by proposing a simple, intuitive, retrieval and template-based question generation approach, illustrated in Figure 1.",457858,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Recent work of (Lewis et al., 2019) uses style transfer for generating questions for (context, answer) pairs but shows little improvement over applying a much simpler question generator which drops, permutates and masks words.",Introduction,"The idea is to retrieve a sentence from the corpus similar to the current context, and then generate a question based on that sentence.",Introduction,contribution-AIC,
+46449,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 19/40
+==========================================================================================
+The idea is to retrieve a sentence from the corpus similar to the current context, and then generate a question based on that sentence.",457859,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We improve upon this paper by proposing a simple, intuitive, retrieval and template-based question generation approach, illustrated in Figure 1.",Introduction,"Having created a question for all (context, answer) pairs, we then fine-tune a pretrained BERT model on this data and evaluate on the SQuAD v1.1 dataset (Rajpurkar et al., 2016). ",Introduction,contribution-AIC,
+46450,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 20/40
+==========================================================================================
+Having created a question for all (context, answer) pairs, we then fine-tune a pretrained BERT model on this data and evaluate on the SQuAD v1.1 dataset (Rajpurkar et al., 2016). ",457860,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"The idea is to retrieve a sentence from the corpus similar to the current context, and then generate a question based on that sentence.",Introduction,"Our contributions are as follows: we introduce a retrieval, template-based framework which achieves state-of-the-art results on SQuAD for unsupervised models, particularly when the answer is a named entity.",Introduction,contribution-AIC#rw,
+46451,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 21/40
+==========================================================================================
+Our contributions are as follows: we introduce a retrieval, template-based framework which achieves state-of-the-art results on SQuAD for unsupervised models, particularly when the answer is a named entity.",457861,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Having created a question for all (context, answer) pairs, we then fine-tune a pretrained BERT model on this data and evaluate on the SQuAD v1.1 dataset (Rajpurkar et al., 2016). ",Introduction,We perform ablation studies to determine the effect of components in template question generation.,Introduction,contribution-AIC#result,
+46452,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 22/40
+==========================================================================================
+We perform ablation studies to determine the effect of components in template question generation.",457862,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Our contributions are as follows: we introduce a retrieval, template-based framework which achieves state-of-the-art results on SQuAD for unsupervised models, particularly when the answer is a named entity.",Introduction,We are releasing our synthetic training data and code.,Introduction,contribution-AIC,
+46453,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 23/40
+==========================================================================================
+We are releasing our synthetic training data and code.",457863,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We perform ablation studies to determine the effect of components in template question generation.,Introduction,"1 2 Unsupervised QA Approach We focus on creating high-quality, non-trivial questions which will allow the model to learn to extract the proper answer from a context-question pair. ",Introduction,contribution-AIC,
+46454,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 24/40
+==========================================================================================
+1 2 Unsupervised QA Approach We focus on creating high-quality, non-trivial questions which will allow the model to learn to extract the proper answer from a context-question pair. ",457864,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We are releasing our synthetic training data and code.,Introduction,Sentence Retrieval: A standard cloze question can be obtained by taking the original sentence in which the answer appears from the context and masking the answer with a chosen token.,Introduction,contribution-AIC#error,
+46455,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 25/40
+==========================================================================================
+Sentence Retrieval: A standard cloze question can be obtained by taking the original sentence in which the answer appears from the context and masking the answer with a chosen token.",457865,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"1 2 Unsupervised QA Approach We focus on creating high-quality, non-trivial questions which will allow the model to learn to extract the proper answer from a context-question pair. ",Introduction,"However, a model trained on this data will only learn text matching and how to fill-in-the-blank, with little generalizability.",Introduction,context-AIC,
+46456,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 26/40
+==========================================================================================
+However, a model trained on this data will only learn text matching and how to fill-in-the-blank, with little generalizability.",457866,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Sentence Retrieval: A standard cloze question can be obtained by taking the original sentence in which the answer appears from the context and masking the answer with a chosen token.,Introduction,"For this reason, we chose to use a retrieval-based approach to obtain a sentence similar to that which contains the answer, upon which to create a given question.",Introduction,context-AIC,
+46457,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 27/40
+==========================================================================================
+For this reason, we chose to use a retrieval-based approach to obtain a sentence similar to that which contains the answer, upon which to create a given question.",457867,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"However, a model trained on this data will only learn text matching and how to fill-in-the-blank, with little generalizability.",Introduction,"For our experiments, we focused on answers which are named entities, which has proven to be a useful prior assumption for downstream QA performance (Lewis et al., 2019) confirmed by our initial experiments.",Introduction,context-AIC,
+46458,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 28/40
+==========================================================================================
+For our experiments, we focused on answers which are named entities, which has proven to be a useful prior assumption for downstream QA performance (Lewis et al., 2019) confirmed by our initial experiments.",457868,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"For this reason, we chose to use a retrieval-based approach to obtain a sentence similar to that which contains the answer, upon which to create a given question.",Introduction,"First, we indexed all of the sentences from a Wikipedia dump using the ElasticSearch search engine.",Introduction,contribution-AIC#result#rw,
+46459,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 29/40
+==========================================================================================
+First, we indexed all of the sentences from a Wikipedia dump using the ElasticSearch search engine.",457869,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"For our experiments, we focused on answers which are named entities, which has proven to be a useful prior assumption for downstream QA performance (Lewis et al., 2019) confirmed by our initial experiments.",Introduction,We also extract named entities for each sentence in both the Wikipedia corpus and the sentences used as queries.,Introduction,contribution-AIC,
+46460,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 30/40
+==========================================================================================
+We also extract named entities for each sentence in both the Wikipedia corpus and the sentences used as queries.",457870,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"First, we indexed all of the sentences from a Wikipedia dump using the ElasticSearch search engine.",Introduction,"We assume access to a named-entity recognition system, and in this work make use of the spaCy 2 NER pipeline.",Introduction,contribution-AIC,
+46461,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 31/40
+==========================================================================================
+We assume access to a named-entity recognition system, and in this work make use of the spaCy 2 NER pipeline.",457871,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We also extract named entities for each sentence in both the Wikipedia corpus and the sentences used as queries.,Introduction,"Then, for a given context-answer pair, we query the index, using the original context sentence as a query, to return a sentence which ( 1) contains the answer, (2) does not come from the context, and (3) has a lower than 95% F1 score with the query sentence to discard highly similar or plagiarized sentences.",Introduction,contribution-AIC,
+46462,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 32/40
+==========================================================================================
+Then, for a given context-answer pair, we query the index, using the original context sentence as a query, to return a sentence which ( 1) contains the answer, (2) does not come from the context, and (3) has a lower than 95% F1 score with the query sentence to discard highly similar or plagiarized sentences.",457872,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We assume access to a named-entity recognition system, and in this work make use of the spaCy 2 NER pipeline.",Introduction,"Besides ensuring that the retrieved sentence and query sentence share the answer entity, we require that at least one additional matching entity appears in both the query sentence and in the entire context, and we perform ablation studies on the effect of this matching below.",Introduction,contribution-AIC,
+46463,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 33/40
+==========================================================================================
+Besides ensuring that the retrieved sentence and query sentence share the answer entity, we require that at least one additional matching entity appears in both the query sentence and in the entire context, and we perform ablation studies on the effect of this matching below.",457873,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Then, for a given context-answer pair, we query the index, using the original context sentence as a query, to return a sentence which ( 1) contains the answer, (2) does not come from the context, and (3) has a lower than 95% F1 score with the query sentence to discard highly similar or plagiarized sentences.",Introduction,These retrieved sentences are then fed into our question-generation module. ,Introduction,contribution-AIC,
+46464,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 34/40
+==========================================================================================
+These retrieved sentences are then fed into our question-generation module. ",457874,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Besides ensuring that the retrieved sentence and query sentence share the answer entity, we require that at least one additional matching entity appears in both the query sentence and in the entire context, and we perform ablation studies on the effect of this matching below.",Introduction,"Template-based Question Generation: We consider several question styles (1) generic clozestyle questions where the answer is replaced by the token ""[MASK]"", (2) templated question ""Wh+B+A+?"" as well as variations on the ordering of this template, as shown in Figure 2.",Introduction,contribution-AIC,
+46465,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 35/40
+==========================================================================================
+Template-based Question Generation: We consider several question styles (1) generic clozestyle questions where the answer is replaced by the token ""[MASK]"", (2) templated question ""Wh+B+A+?"" as well as variations on the ordering of this template, as shown in Figure 2.",457875,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,These retrieved sentences are then fed into our question-generation module. ,Introduction,"Given the retrieved sentence in the form of [Fragment A] [Answer] [Fragment B], the templated question ""Wh+B+A+?"" replaces the answer with a Wh-component (e.g., what, who, where), which depends on the entity type of the answer and places the Wh-component at the beginning of the question, followed by sentence Fragment B and Fragment A. For the choice of wh-component, we sample a bi-gram based on prior probabilities of that bi-gram being associated with the named-entity type of the answer.",Introduction,contribution-AIC,
+46466,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 36/40
+==========================================================================================
+Given the retrieved sentence in the form of [Fragment A] [Answer] [Fragment B], the templated question ""Wh+B+A+?"" replaces the answer with a Wh-component (e.g., what, who, where), which depends on the entity type of the answer and places the Wh-component at the beginning of the question, followed by sentence Fragment B and Fragment A. For the choice of wh-component, we sample a bi-gram based on prior probabilities of that bi-gram being associated with the named-entity type of the answer.",457876,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Template-based Question Generation: We consider several question styles (1) generic clozestyle questions where the answer is replaced by the token ""[MASK]"", (2) templated question ""Wh+B+A+?"" as well as variations on the ordering of this template, as shown in Figure 2.",Introduction,This prior probability is calculated based on named-entity and question bi-gram starters from the SQuAD dataset.,Introduction,contribution-AIC,
+46467,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 37/40
+==========================================================================================
+This prior probability is calculated based on named-entity and question bi-gram starters from the SQuAD dataset.",457877,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Given the retrieved sentence in the form of [Fragment A] [Answer] [Fragment B], the templated question ""Wh+B+A+?"" replaces the answer with a Wh-component (e.g., what, who, where), which depends on the entity type of the answer and places the Wh-component at the beginning of the question, followed by sentence Fragment B and Fragment A. For the choice of wh-component, we sample a bi-gram based on prior probabilities of that bi-gram being associated with the named-entity type of the answer.",Introduction,"This information does not make use of the full context-question-answer and can be viewed as prior information, not disturbing the integrity of our unsupervised approach.",Introduction,contribution-AIC,
+46468,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 38/40
+==========================================================================================
+This information does not make use of the full context-question-answer and can be viewed as prior information, not disturbing the integrity of our unsupervised approach.",457878,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,This prior probability is calculated based on named-entity and question bi-gram starters from the SQuAD dataset.,Introduction,"Additionally, the choice of wh component does not significantly affect results.",Introduction,contribution-AIC,
+46469,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 39/40
+==========================================================================================
+Additionally, the choice of wh component does not significantly affect results.",457879,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"This information does not make use of the full context-question-answer and can be viewed as prior information, not disturbing the integrity of our unsupervised approach.",Introduction,"For template-based approaches, we also experimented with clause-based templates but did not find significant differences in performance.",Introduction,result,
+46470,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+1. Introduction -- 40/40
+==========================================================================================
+For template-based approaches, we also experimented with clause-based templates but did not find significant differences in performance.",457880,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Additionally, the choice of wh component does not significantly affect results.",Introduction,"Settings: For all downstream question answering models, we fine-tune a pretrained BERT model using the Transformers repository (Wolf et al., 2019) and report ablation study numbers using the baseuncased version of BERT, consistent with (Lewis et al., 2019).",Experiments,result,
+46471,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 1/54
+==========================================================================================
+Settings: For all downstream question answering models, we fine-tune a pretrained BERT model using the Transformers repository (Wolf et al., 2019) and report ablation study numbers using the baseuncased version of BERT, consistent with (Lewis et al., 2019).",457881,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"For template-based approaches, we also experimented with clause-based templates but did not find significant differences in performance.",Introduction,All models are trained and validated on generated pairs of questions and answers along with their contexts tested on the SQuAD development set.,Experiments,,
+46472,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 2/54
+==========================================================================================
+All models are trained and validated on generated pairs of questions and answers along with their contexts tested on the SQuAD development set.",457882,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Settings: For all downstream question answering models, we fine-tune a pretrained BERT model using the Transformers repository (Wolf et al., 2019) and report ablation study numbers using the baseuncased version of BERT, consistent with (Lewis et al., 2019).",Experiments,"The training set differs for each ablation study and will be described below, while the validation dataset is a random set of 1,000 template-based generated data points, which is consistent across all ablation studies.",Experiments,,
+46473,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 3/54
+==========================================================================================
+The training set differs for each ablation study and will be described below, while the validation dataset is a random set of 1,000 template-based generated data points, which is consistent across all ablation studies.",457883,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,All models are trained and validated on generated pairs of questions and answers along with their contexts tested on the SQuAD development set.,Experiments,"We train all QA models for 2 epochs, checkpointing the models every 500 steps and choosing the checkpoint with the highest F1 score on the validation set as the best model.",Experiments,,
+46474,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 4/54
+==========================================================================================
+We train all QA models for 2 epochs, checkpointing the models every 500 steps and choosing the checkpoint with the highest F1 score on the validation set as the best model.",457884,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"The training set differs for each ablation study and will be described below, while the validation dataset is a random set of 1,000 template-based generated data points, which is consistent across all ablation studies.",Experiments,All ablation studies are averaged over two training runs with different seeds.,Experiments,,
+46475,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 5/54
+==========================================================================================
+All ablation studies are averaged over two training runs with different seeds.",457885,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We train all QA models for 2 epochs, checkpointing the models every 500 steps and choosing the checkpoint with the highest F1 score on the validation set as the best model.",Experiments,"Unless otherwise stated, experiments are performed using 50,000 synthetic QA training examples, as initial models performed best with this amount.",Experiments,,
+46476,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 6/54
+==========================================================================================
+Unless otherwise stated, experiments are performed using 50,000 synthetic QA training examples, as initial models performed best with this amount.",457886,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,All ablation studies are averaged over two training runs with different seeds.,Experiments,We will make this generated training data public.,Experiments,,
+46477,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 7/54
+==========================================================================================
+We will make this generated training data public.",457887,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Unless otherwise stated, experiments are performed using 50,000 synthetic QA training examples, as initial models performed best with this amount.",Experiments,Effect of retrieved sentences: We test the effect of retrieved vs original sentences as input to question generation when using generic cloze questions.,Model Analysis,directions,
+46478,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 8/54
+==========================================================================================
+0. Model Analysis -- 1/40
+------------------------------------------------------------------------------------------
+Effect of retrieved sentences: We test the effect of retrieved vs original sentences as input to question generation when using generic cloze questions.",457888,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We will make this generated training data public.,Experiments,"As shown in Table 1, using retrieved sentences improves over using the original sentence, reinforcing our motivation that a retrieved sentence, which may not match trivially the current context, forces the QA model to learn more complex relationships than just simple entity matching.",Model Analysis,,
+46479,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 9/54
+==========================================================================================
+0. Model Analysis -- 2/40
+------------------------------------------------------------------------------------------
+As shown in Table 1, using retrieved sentences improves over using the original sentence, reinforcing our motivation that a retrieved sentence, which may not match trivially the current context, forces the QA model to learn more complex relationships than just simple entity matching.",457889,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Effect of retrieved sentences: We test the effect of retrieved vs original sentences as input to question generation when using generic cloze questions.,Model Analysis,The retrieval process may return sentences which do not match the original context.,Model Analysis,result,
+46480,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 10/54
+==========================================================================================
+0. Model Analysis -- 3/40
+------------------------------------------------------------------------------------------
+The retrieval process may return sentences which do not match the original context.",457890,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"As shown in Table 1, using retrieved sentences improves over using the original sentence, reinforcing our motivation that a retrieved sentence, which may not match trivially the current context, forces the QA model to learn more complex relationships than just simple entity matching.",Model Analysis,"On a random sample, 15/18 retrieved sentences were judged as entirely relevant to the original sentence.",Model Analysis,result,
+46481,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 11/54
+==========================================================================================
+0. Model Analysis -- 4/40
+------------------------------------------------------------------------------------------
+On a random sample, 15/18 retrieved sentences were judged as entirely relevant to the original sentence.",457891,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,The retrieval process may return sentences which do not match the original context.,Model Analysis,"This retrieval is already quite good, as we use a high quality ElasticSearch retrieval and use the original context sentence as the query, not just the answer word.",Model Analysis,result,
+46482,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 12/54
+==========================================================================================
+0. Model Analysis -- 5/40
+------------------------------------------------------------------------------------------
+This retrieval is already quite good, as we use a high quality ElasticSearch retrieval and use the original context sentence as the query, not just the answer word.",457892,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"On a random sample, 15/18 retrieved sentences were judged as entirely relevant to the original sentence.",Model Analysis,"While we do not explicitly ensure that the retrieved sentence has the same meaning, we find that the search results with entity matching gives largely semantically matching sentences.",Model Analysis,result,
+46483,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 13/54
+==========================================================================================
+0. Model Analysis -- 6/40
+------------------------------------------------------------------------------------------
+While we do not explicitly ensure that the retrieved sentence has the same meaning, we find that the search results with entity matching gives largely semantically matching sentences.",457893,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"This retrieval is already quite good, as we use a high quality ElasticSearch retrieval and use the original context sentence as the query, not just the answer word.",Model Analysis,"Additionally, we believe the sentences which have loosely related meaning may act as a regularization factor which prevent the downstream QA model from learning only string matching patterns.",Model Analysis,result,
+46484,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 14/54
+==========================================================================================
+0. Model Analysis -- 7/40
+------------------------------------------------------------------------------------------
+Additionally, we believe the sentences which have loosely related meaning may act as a regularization factor which prevent the downstream QA model from learning only string matching patterns.",457894,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"While we do not explicitly ensure that the retrieved sentence has the same meaning, we find that the search results with entity matching gives largely semantically matching sentences.",Model Analysis,"Along these lines, (Lewis et al., 2019) found that a simple noise function of dropping, masking and permuting words was a strong question generation baseline.",Model Analysis,result,
+46485,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 15/54
+==========================================================================================
+0. Model Analysis -- 8/40
+------------------------------------------------------------------------------------------
+Along these lines, (Lewis et al., 2019) found that a simple noise function of dropping, masking and permuting words was a strong question generation baseline.",457895,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Additionally, we believe the sentences which have loosely related meaning may act as a regularization factor which prevent the downstream QA model from learning only string matching patterns.",Model Analysis,"We believe that loosely related context sentences can act as a more intuitive noise function, and investigating the role of the semantic match of the retrieved sentences is an important direction for future work.",Model Analysis,result#rw,
+46486,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 16/54
+==========================================================================================
+0. Model Analysis -- 9/40
+------------------------------------------------------------------------------------------
+We believe that loosely related context sentences can act as a more intuitive noise function, and investigating the role of the semantic match of the retrieved sentences is an important direction for future work.",457896,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Along these lines, (Lewis et al., 2019) found that a simple noise function of dropping, masking and permuting words was a strong question generation baseline.",Model Analysis,"For the sections which follow, we only show results of retrieved sentences, as the trend of improved performance held across all experiments. ",Model Analysis,directions#result,
+46487,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 17/54
+==========================================================================================
+0. Model Analysis -- 10/40
+------------------------------------------------------------------------------------------
+For the sections which follow, we only show results of retrieved sentences, as the trend of improved performance held across all experiments. ",457897,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We believe that loosely related context sentences can act as a more intuitive noise function, and investigating the role of the semantic match of the retrieved sentences is an important direction for future work.",Model Analysis,Effect of template components: We evaluate the effect of individual template components on downstream QA performance.,Model Analysis,,
+46488,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 18/54
+==========================================================================================
+0. Model Analysis -- 11/40
+------------------------------------------------------------------------------------------
+Effect of template components: We evaluate the effect of individual template components on downstream QA performance.",457898,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"For the sections which follow, we only show results of retrieved sentences, as the trend of improved performance held across all experiments. ",Model Analysis,Results are shown in Table 2.,Model Analysis,,
+46489,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 19/54
+==========================================================================================
+0. Model Analysis -- 12/40
+------------------------------------------------------------------------------------------
+Results are shown in Table 2.",457899,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Effect of template components: We evaluate the effect of individual template components on downstream QA performance.,Model Analysis,Wh template methods improve largely over the simple cloze templates.,Model Analysis,,
+46490,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 20/54
+==========================================================================================
+0. Model Analysis -- 13/40
+------------------------------------------------------------------------------------------
+Wh template methods improve largely over the simple cloze templates.",457900,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Results are shown in Table 2.,Model Analysis,"""Wh + B + A + ?"" performs best among the template-based methods, as having the Wh word at the beginning most resembles the target SQuAD domain and switching the order of Fragment B and Fragment A may force the model to learn more complex relationships from the question.",Model Analysis,result,
+46491,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 21/54
+==========================================================================================
+0. Model Analysis -- 14/40
+------------------------------------------------------------------------------------------
+""Wh + B + A + ?"" performs best among the template-based methods, as having the Wh word at the beginning most resembles the target SQuAD domain and switching the order of Fragment B and Fragment A may force the model to learn more complex relationships from the question.",457901,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Wh template methods improve largely over the simple cloze templates.,Model Analysis,We additionally test the effect of the wh-component and the question mark added at the end of the sentence.,Model Analysis,result,
+46492,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 22/54
+==========================================================================================
+0. Model Analysis -- 15/40
+------------------------------------------------------------------------------------------
+We additionally test the effect of the wh-component and the question mark added at the end of the sentence.",457902,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"""Wh + B + A + ?"" performs best among the template-based methods, as having the Wh word at the beginning most resembles the target SQuAD domain and switching the order of Fragment B and Fragment A may force the model to learn more complex relationships from the question.",Model Analysis,"Using the same data as ""Wh + B + A + ?""",Model Analysis,,
+46493,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 23/54
+==========================================================================================
+0. Model Analysis -- 16/40
+------------------------------------------------------------------------------------------
+Using the same data as ""Wh + B + A + ?""",457903,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We additionally test the effect of the wh-component and the question mark added at the end of the sentence.,Model Analysis,but removing the wh-component results in a large decrease in performance.,Model Analysis,error#result,
+46494,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 24/54
+==========================================================================================
+0. Model Analysis -- 17/40
+------------------------------------------------------------------------------------------
+but removing the wh-component results in a large decrease in performance.",457904,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Using the same data as ""Wh + B + A + ?""",Model Analysis,"We believe that this is because the wh-component signals the type of possible answer entities, which helps narrow down the space of possible answers.",Model Analysis,error#result,
+46495,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 25/54
+==========================================================================================
+0. Model Analysis -- 18/40
+------------------------------------------------------------------------------------------
+We believe that this is because the wh-component signals the type of possible answer entities, which helps narrow down the space of possible answers.",457905,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,but removing the wh-component results in a large decrease in performance.,Model Analysis,"Removing the question mark at the end of the template also results in decreased performance, but not as large as removing the wh-component.",Model Analysis,result,
+46496,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 26/54
+==========================================================================================
+0. Model Analysis -- 19/40
+------------------------------------------------------------------------------------------
+Removing the question mark at the end of the template also results in decreased performance, but not as large as removing the wh-component.",457906,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We believe that this is because the wh-component signals the type of possible answer entities, which helps narrow down the space of possible answers.",Model Analysis,This may be a result of BERT pretraining which expects certain punctuation based on sentence structure.,Model Analysis,result,
+46497,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 27/54
+==========================================================================================
+0. Model Analysis -- 20/40
+------------------------------------------------------------------------------------------
+This may be a result of BERT pretraining which expects certain punctuation based on sentence structure.",457907,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Removing the question mark at the end of the template also results in decreased performance, but not as large as removing the wh-component.",Model Analysis,"We note that these questions may not be grammatical, which may have an impact on performance.",Model Analysis,result,
+46498,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 28/54
+==========================================================================================
+0. Model Analysis -- 21/40
+------------------------------------------------------------------------------------------
+We note that these questions may not be grammatical, which may have an impact on performance.",457908,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,This may be a result of BERT pretraining which expects certain punctuation based on sentence structure.,Model Analysis,Improving the question quality makes a difference in performance as seen from the jump from cloze-style questions to template questions.,Model Analysis,result,
+46499,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 29/54
+==========================================================================================
+0. Model Analysis -- 22/40
+------------------------------------------------------------------------------------------
+Improving the question quality makes a difference in performance as seen from the jump from cloze-style questions to template questions.",457909,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We note that these questions may not be grammatical, which may have an impact on performance.",Model Analysis,"The ablation studies suggest that a combination of question relevance, though matching entities, and question formulation, as described above, determine downstream performance.",Model Analysis,result,
+46500,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 30/54
+==========================================================================================
+0. Model Analysis -- 23/40
+------------------------------------------------------------------------------------------
+The ablation studies suggest that a combination of question relevance, though matching entities, and question formulation, as described above, determine downstream performance.",457910,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Improving the question quality makes a difference in performance as seen from the jump from cloze-style questions to template questions.,Model Analysis,Balancing those two components is an interesting problem and we leave improving grammaticality and fluency through means such as language model generation for future experiments. ,Model Analysis,result,
+46501,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 31/54
+==========================================================================================
+0. Model Analysis -- 24/40
+------------------------------------------------------------------------------------------
+Balancing those two components is an interesting problem and we leave improving grammaticality and fluency through means such as language model generation for future experiments. ",457911,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"The ablation studies suggest that a combination of question relevance, though matching entities, and question formulation, as described above, determine downstream performance.",Model Analysis,"In the last two rows of Table 2, we show the effect of using the wh bi-gram prior on downstream QA training.",Model Analysis,directions#result,
+46502,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 32/54
+==========================================================================================
+0. Model Analysis -- 25/40
+------------------------------------------------------------------------------------------
+In the last two rows of Table 2, we show the effect of using the wh bi-gram prior on downstream QA training.",457912,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Balancing those two components is an interesting problem and we leave improving grammaticality and fluency through means such as language model generation for future experiments. ,Model Analysis,"Using the most-common wh word by grouping named entities into 5 categories according to (Lewis et al., 2019) performs very close to the best-performing wh n-gram prior method, while using a single wh-word (what) results in a significant decrease in performance.",Model Analysis,,
+46503,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 33/54
+==========================================================================================
+0. Model Analysis -- 26/40
+------------------------------------------------------------------------------------------
+Using the most-common wh word by grouping named entities into 5 categories according to (Lewis et al., 2019) performs very close to the best-performing wh n-gram prior method, while using a single wh-word (what) results in a significant decrease in performance.",457913,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"In the last two rows of Table 2, we show the effect of using the wh bi-gram prior on downstream QA training.",Model Analysis,These results suggest that information about named entity type signaled by the wh-word does provide important information to the model but further information beyond wh-simple does not improve results significantly. ,Model Analysis,result#rw,
+46504,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 34/54
+==========================================================================================
+0. Model Analysis -- 27/40
+------------------------------------------------------------------------------------------
+These results suggest that information about named entity type signaled by the wh-word does provide important information to the model but further information beyond wh-simple does not improve results significantly. ",457914,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Using the most-common wh word by grouping named entities into 5 categories according to (Lewis et al., 2019) performs very close to the best-performing wh n-gram prior method, while using a single wh-word (what) results in a significant decrease in performance.",Model Analysis,Effect of filtering by entity matching:,Model Analysis,result,
+46505,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 35/54
+==========================================================================================
+0. Model Analysis -- 28/40
+------------------------------------------------------------------------------------------
+Effect of filtering by entity matching:",457915,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,These results suggest that information about named entity type signaled by the wh-word does provide important information to the model but further information beyond wh-simple does not improve results significantly. ,Model Analysis,"Besides ensuring that the retrieved sentence and query sentence share the answer entity, we require that at least one additional matching entity appears in both query sentence and entire context.",Model Analysis,,
+46506,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 36/54
+==========================================================================================
+0. Model Analysis -- 29/40
+------------------------------------------------------------------------------------------
+Besides ensuring that the retrieved sentence and query sentence share the answer entity, we require that at least one additional matching entity appears in both query sentence and entire context.",457916,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Effect of filtering by entity matching:,Model Analysis,Results are shown in Table 3.,Model Analysis,,
+46507,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 37/54
+==========================================================================================
+0. Model Analysis -- 30/40
+------------------------------------------------------------------------------------------
+Results are shown in Table 3.",457917,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Besides ensuring that the retrieved sentence and query sentence share the answer entity, we require that at least one additional matching entity appears in both query sentence and entire context.",Model Analysis,"Auxillary matching leads to improvements over no matching when using template-based data, with best results using matching with both query and context.",Model Analysis,,
+46508,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 38/54
+==========================================================================================
+0. Model Analysis -- 31/40
+------------------------------------------------------------------------------------------
+Auxillary matching leads to improvements over no matching when using template-based data, with best results using matching with both query and context.",457918,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Results are shown in Table 3.,Model Analysis,Matching may filter some sentences whose topic are too far from the original context.,Model Analysis,result,
+46509,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 39/54
+==========================================================================================
+0. Model Analysis -- 32/40
+------------------------------------------------------------------------------------------
+Matching may filter some sentences whose topic are too far from the original context.",457919,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Auxillary matching leads to improvements over no matching when using template-based data, with best results using matching with both query and context.",Model Analysis,We leave further investigation of the effect of retrieved sentence relevance to future work. ,Model Analysis,result,
+46510,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 40/54
+==========================================================================================
+0. Model Analysis -- 33/40
+------------------------------------------------------------------------------------------
+We leave further investigation of the effect of retrieved sentence relevance to future work. ",457920,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Matching may filter some sentences whose topic are too far from the original context.,Model Analysis,"Effect of synthetic training dataset size: Notably, (Lewis et al., 2019)    as well.",Model Analysis,directions,
+46511,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 41/54
+==========================================================================================
+0. Model Analysis -- 34/40
+------------------------------------------------------------------------------------------
+Effect of synthetic training dataset size: Notably, (Lewis et al., 2019)    as well.",457921,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We leave further investigation of the effect of retrieved sentence relevance to future work. ,Model Analysis,Figure 3 shows the performance from training over random subsets of differing sizes and testing on the SQuAD development data.,Model Analysis,error#result#rw,
+46512,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 42/54
+==========================================================================================
+0. Model Analysis -- 35/40
+------------------------------------------------------------------------------------------
+Figure 3 shows the performance from training over random subsets of differing sizes and testing on the SQuAD development data.",457922,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Effect of synthetic training dataset size: Notably, (Lewis et al., 2019)    as well.",Model Analysis,"We sample a random question for each context from the data of (Lewis et al., 2019).",Model Analysis,,
+46513,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 43/54
+==========================================================================================
+0. Model Analysis -- 36/40
+------------------------------------------------------------------------------------------
+We sample a random question for each context from the data of (Lewis et al., 2019).",457923,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,Figure 3 shows the performance from training over random subsets of differing sizes and testing on the SQuAD development data.,Model Analysis,"Even with as little as 10k datapoints, training from our synthetically generated template-based data with auxiliary matching outperforms the results from ablation studies in (Lewis et al., 2019).",Model Analysis,,
+46514,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 44/54
+==========================================================================================
+0. Model Analysis -- 37/40
+------------------------------------------------------------------------------------------
+Even with as little as 10k datapoints, training from our synthetically generated template-based data with auxiliary matching outperforms the results from ablation studies in (Lewis et al., 2019).",457924,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We sample a random question for each context from the data of (Lewis et al., 2019).",Model Analysis,"Using data from our templatebased data consistently outperforms that of (Lewis et al., 2019).",Model Analysis,result#rw,
+46515,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 45/54
+==========================================================================================
+0. Model Analysis -- 38/40
+------------------------------------------------------------------------------------------
+Using data from our templatebased data consistently outperforms that of (Lewis et al., 2019).",457925,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Even with as little as 10k datapoints, training from our synthetically generated template-based data with auxiliary matching outperforms the results from ablation studies in (Lewis et al., 2019).",Model Analysis,"Training on either dataset shows similar trends; performance decreases after increasing the number of synthetic examples past 100,000, likely due to a distributional mismatch with the SQuAD data.",Model Analysis,result#rw,
+46516,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 46/54
+==========================================================================================
+0. Model Analysis -- 39/40
+------------------------------------------------------------------------------------------
+Training on either dataset shows similar trends; performance decreases after increasing the number of synthetic examples past 100,000, likely due to a distributional mismatch with the SQuAD data.",457926,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Using data from our templatebased data consistently outperforms that of (Lewis et al., 2019).",Model Analysis,"We chose to use 50,000 examples for our final experiments with other ablation studies as this number gave good performance in initial experiments.",Model Analysis,result,
+46517,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 47/54
+==========================================================================================
+0. Model Analysis -- 40/40
+------------------------------------------------------------------------------------------
+We chose to use 50,000 examples for our final experiments with other ablation studies as this number gave good performance in initial experiments.",457927,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"Training on either dataset shows similar trends; performance decreases after increasing the number of synthetic examples past 100,000, likely due to a distributional mismatch with the SQuAD data.",Model Analysis,We compare training on our best template-based data with state-of-the-art in Table 4.,Comparison of Best-Performing Models:,,
+46518,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 48/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 1/7
+------------------------------------------------------------------------------------------
+We compare training on our best template-based data with state-of-the-art in Table 4.",457928,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We chose to use 50,000 examples for our final experiments with other ablation studies as this number gave good performance in initial experiments.",Model Analysis,SQuAD F1 results reflect results on the hidden SQuAD test set.,Comparison of Best-Performing Models:,,
+46519,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 49/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 2/7
+------------------------------------------------------------------------------------------
+SQuAD F1 results reflect results on the hidden SQuAD test set.",457929,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We compare training on our best template-based data with state-of-the-art in Table 4.,Comparison of Best-Performing Models:,We report single-model numbers; Lewis et al.,Comparison of Best-Performing Models:,,
+46520,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 50/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 3/7
+------------------------------------------------------------------------------------------
+We report single-model numbers; Lewis et al.",457930,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,SQuAD F1 results reflect results on the hidden SQuAD test set.,Comparison of Best-Performing Models:,"(2019)  BERT-large, although using the original BERTlarge gives similar performance of 62.69 on the SQuAD dev set.",Comparison of Best-Performing Models:,,
+46521,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 51/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 4/7
+------------------------------------------------------------------------------------------
+(2019)  BERT-large, although using the original BERTlarge gives similar performance of 62.69 on the SQuAD dev set.",457931,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We report single-model numbers; Lewis et al.,Comparison of Best-Performing Models:,"We report numbers on the sample of SQuAD questions which are named entities, which we refer to as SQuAD-NER.",Comparison of Best-Performing Models:,,
+46522,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 52/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 5/7
+------------------------------------------------------------------------------------------
+We report numbers on the sample of SQuAD questions which are named entities, which we refer to as SQuAD-NER.",457932,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"(2019)  BERT-large, although using the original BERTlarge gives similar performance of 62.69 on the SQuAD dev set.",Comparison of Best-Performing Models:,"The subset corresponding to the SQuAD development dataset has 4,338 samples, and may differ slightly from (Lewis et al., 2019) due to differences in NER preprocessing.",Comparison of Best-Performing Models:,,
+46523,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 53/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 6/7
+------------------------------------------------------------------------------------------
+The subset corresponding to the SQuAD development dataset has 4,338 samples, and may differ slightly from (Lewis et al., 2019) due to differences in NER preprocessing.",457933,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We report numbers on the sample of SQuAD questions which are named entities, which we refer to as SQuAD-NER.",Comparison of Best-Performing Models:,"We also trained a fully-supervised model on the SQuAD training dataset with varying amounts of data and found our unsupervised performance equals the supervised performance trained on about 3,000 labeled examples.",Comparison of Best-Performing Models:,,
+46524,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+2. Experiments -- 54/54
+==========================================================================================
+1. Comparison of Best-Performing Models: -- 7/7
+------------------------------------------------------------------------------------------
+We also trained a fully-supervised model on the SQuAD training dataset with varying amounts of data and found our unsupervised performance equals the supervised performance trained on about 3,000 labeled examples.",457934,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"The subset corresponding to the SQuAD development dataset has 4,338 samples, and may differ slightly from (Lewis et al., 2019) due to differences in NER preprocessing.",Comparison of Best-Performing Models:,In this paper we introduce a retrieval-based approach to unsupervised extractive question answering.,Conclusion,result,
+46525,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+3. Conclusion -- 1/4
+==========================================================================================
+In this paper we introduce a retrieval-based approach to unsupervised extractive question answering.",457935,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"We also trained a fully-supervised model on the SQuAD training dataset with varying amounts of data and found our unsupervised performance equals the supervised performance trained on about 3,000 labeled examples.",Comparison of Best-Performing Models:,"A simple template-based approach achieves state-of-the-art results for unsupervised methods on the SQuAD dataset of 64.04 F1, and 77.55 F1 when the answer is a named entity.",Conclusion,contribution-AIC,
+46526,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+3. Conclusion -- 2/4
+==========================================================================================
+A simple template-based approach achieves state-of-the-art results for unsupervised methods on the SQuAD dataset of 64.04 F1, and 77.55 F1 when the answer is a named entity.",457936,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,In this paper we introduce a retrieval-based approach to unsupervised extractive question answering.,Conclusion,We analyze the effect of several components in our template-based approaches through ablation studies.,Conclusion,result,
+46527,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+3. Conclusion -- 3/4
+==========================================================================================
+We analyze the effect of several components in our template-based approaches through ablation studies.",457937,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,"A simple template-based approach achieves state-of-the-art results for unsupervised methods on the SQuAD dataset of 64.04 F1, and 77.55 F1 when the answer is a named entity.",Conclusion,"We aim to experiment with other datasets and other domains, incorporate our synthetic data in a semi-supervised setting and test the feasibility of our framework in a multi-lingual setting.",Conclusion,contribution-AIC,
+46528,"Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering
+==========================================================================================
+3. Conclusion -- 4/4
+==========================================================================================
+We aim to experiment with other datasets and other domains, incorporate our synthetic data in a semi-supervised setting and test the feasibility of our framework in a multi-lingual setting.",457938,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,We analyze the effect of several components in our template-based approaches through ablation studies.,Conclusion,,,directions,
+46529,"==========================================================================================
+Annotator feedback
+==========================================================================================
+
+You just finished annotating the article entitled <<Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering>>. Please answer following questions: 
+
+1. Do you think that this article was difficult to understand, in a way that may have affected the quality of your annotations, because of its technicity / because it handles subjects you are unfamiliar with ?
+
+Please add any label of your choice if your answer is yes.",457938,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,,,,,,
+46530,"==========================================================================================
+Annotator feedback
+==========================================================================================
+
+You just finished annotating the article entitled <<Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering>>. Please answer following questions: 
+
+2. Do you think that this article was difficult to understand, in a way that may have affected the quality of your annotations, because of its writing style / structure / parsing errors ?
+
+Please add any label of your choice if your answer is yes.",457938,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,,,,,,
+46531,"==========================================================================================
+Annotator feedback
+==========================================================================================
+
+You just finished annotating the article entitled <<Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering>>. Please answer following questions: 
+
+3. Did you know / read the article before this annotation task, or do you think you have identified its authors ?
+
+Please add any label of your choice if your answer is yes.",457938,Template-Based Question Generation from Retrieved Sentences for Improved Unsupervised Question Answering,"0. abstract
+1. Introduction
+2. Experiments
+3. Conclusion
+",2020,,,,,,
+46532,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+0. abstract -- 1/6
+==========================================================================================
+This paper describes an empirical study on the optimal granularity of the phrase structure rules and the optimal strategy for interleaving CFG parsing with unification in order to implement an eltlcient unification-based parsing system.",706105,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,,,"We claim that using ""medium-grained"" CFG phrase structure rules, which balance tile computational cost of CI?G parsing and unification, are a cost-effective solution for making unification-based grammar both efficicnt and easy to maintain.",abstract,contribution-AIC,
+46533,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+0. abstract -- 2/6
+==========================================================================================
+We claim that using ""medium-grained"" CFG phrase structure rules, which balance tile computational cost of CI?G parsing and unification, are a cost-effective solution for making unification-based grammar both efficicnt and easy to maintain.",706106,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,This paper describes an empirical study on the optimal granularity of the phrase structure rules and the optimal strategy for interleaving CFG parsing with unification in order to implement an eltlcient unification-based parsing system.,abstract,"We also claim that ""late unification"", which delays unification until a complete CI""G parse is found, saves unnecessary copies of DAGs for irrelevant subparses and improves performance significantly.",abstract,result,
+46534,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+0. abstract -- 3/6
+==========================================================================================
+We also claim that ""late unification"", which delays unification until a complete CI""G parse is found, saves unnecessary copies of DAGs for irrelevant subparses and improves performance significantly.",706107,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"We claim that using ""medium-grained"" CFG phrase structure rules, which balance tile computational cost of CI?G parsing and unification, are a cost-effective solution for making unification-based grammar both efficicnt and easy to maintain.",abstract,The effectiveness of these methods was proved in an extensive experiment.,abstract,result,
+46535,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+0. abstract -- 4/6
+==========================================================================================
+The effectiveness of these methods was proved in an extensive experiment.",706108,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"We also claim that ""late unification"", which delays unification until a complete CI""G parse is found, saves unnecessary copies of DAGs for irrelevant subparses and improves performance significantly.",abstract,"The results show that, on average, the proposed system parses 3.5 times faster than our previous one.",abstract,result,
+46536,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+0. abstract -- 5/6
+==========================================================================================
+The results show that, on average, the proposed system parses 3.5 times faster than our previous one.",706109,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The effectiveness of these methods was proved in an extensive experiment.,abstract,"The grammar and the parser described in this paper are fully implemented and ased as the .lapmmse analysis module in SL-TRANS, the speech-to-speech translation system of ATR.",abstract,result,
+46537,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+0. abstract -- 6/6
+==========================================================================================
+The grammar and the parser described in this paper are fully implemented and ased as the .lapmmse analysis module in SL-TRANS, the speech-to-speech translation system of ATR.",706110,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The results show that, on average, the proposed system parses 3.5 times faster than our previous one.",abstract,Uuifieation-based framework bins been an area of active research in natural language processing.,Introduction,contribution-AIC#error,what does this sentence mean ???
+46538,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+1. Introduction -- 1/5
+==========================================================================================
+Uuifieation-based framework bins been an area of active research in natural language processing.",706111,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The grammar and the parser described in this paper are fully implemented and ased as the .lapmmse analysis module in SL-TRANS, the speech-to-speech translation system of ATR.",abstract,"Unification, wbich is the primary operation of ibis frame.work, provides a kind of constraint-checking mechanism for nlerging varioas information sources, sllcb as syntax, semantics, and pragmatics.",Introduction,context-AIC,
+46539,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+1. Introduction -- 2/5
+==========================================================================================
+Unification, wbich is the primary operation of ibis frame.work, provides a kind of constraint-checking mechanism for nlerging varioas information sources, sllcb as syntax, semantics, and pragmatics.",706112,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,Uuifieation-based framework bins been an area of active research in natural language processing.,Introduction,"The computational inefficiency of unification, however, precludes tile development of large practical NLP systems, although the framework has many attractiw~ theoretical properties. ",Introduction,context-AIC,
+46540,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+1. Introduction -- 3/5
+==========================================================================================
+The computational inefficiency of unification, however, precludes tile development of large practical NLP systems, although the framework has many attractiw~ theoretical properties. ",706113,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Unification, wbich is the primary operation of ibis frame.work, provides a kind of constraint-checking mechanism for nlerging varioas information sources, sllcb as syntax, semantics, and pragmatics.",Introduction,The efforts made to improve tile efficiency of a uriitication-ba.sed parsing system can be classified into four categories. ,Introduction,context-AIC,
+46541,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+1. Introduction -- 4/5
+==========================================================================================
+The efforts made to improve tile efficiency of a uriitication-ba.sed parsing system can be classified into four categories. ",706114,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The computational inefficiency of unification, however, precludes tile development of large practical NLP systems, although the framework has many attractiw~ theoretical properties. ",Introduction,• CFG parsing algorithm • Graph unification algorithm,Introduction,context-AIC,
+46542,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+1. Introduction -- 5/5
+==========================================================================================
+• CFG parsing algorithm • Graph unification algorithm",706115,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The efforts made to improve tile efficiency of a uriitication-ba.sed parsing system can be classified into four categories. ,Introduction,"There bave been well-known efficient CFG parsing algorithms such as CKY [Aho mid UllHnm,77], Ear~ ley [Earley,70], CtIAffl' (Kay,80], eatd I,R [Aho and Ullmaa L 77]",• Granunar representation and organizati(m • Interaction between CFG parsing and unilication,context-AIC#error,
+46543,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 1/28
+==========================================================================================
+The order constraints between auxiliaries are specified in the annotution of rule (1) and each lexi cal entry by the combination of tile syntactic features, such as the synlheadlsubcat for preceding constituents, tile synlheadlcoh for following constituents, and the syn[headlroodl for the position of the con stituent~ in the verb phrase hierarchy.",706116,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"in the coarse-grained grammar, we provide a single phrase structure rule for the phcnomena.",Example: Medium-Grained Rules,"For example, the causative auxiliary verb sern has the following, feature bundles in its syn{headlmodl feature. ",v~(v AUXV) O),,
+46544,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 2/28
+==========================================================================================
+For example, the causative auxiliary verb sern has the following, feature bundles in its syn{headlmodl feature. ",706117,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The order constraints between auxiliaries are specified in the annotution of rule (1) and each lexi cal entry by the combination of tile syntactic features, such as the synlheadlsubcat for preceding constituents, tile synlheadlcoh for following constituents, and the syn[headlroodl for the position of the con stituent~ in the verb phrase hierarchy.",v~(v AUXV) O),[[CAUS +] [DEhC,v~(v AUXV) O),,
+46545,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 3/28
+==========================================================================================
+[[CAUS +] [DEhC",706118,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"For example, the causative auxiliary verb sern has the following, feature bundles in its syn{headlmodl feature. ",v~(v AUXV) O),"[SFP-3 -]] In converting the rule, first we have claasitied the verbal phrasal categories according to the hierar.",v~(v AUXV) O),,
+46546,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 4/28
+==========================================================================================
+[SFP-3 -]] In converting the rule, first we have claasitied the verbal phrasal categories according to the hierar.",706119,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,[[CAUS +] [DEhC,v~(v AUXV) O),"ehy, e.g. V-kernel, V-aspect, V-moodl, V-negt, V-mood2~ and V-tease, then we have subcategorized the auxiliari~ as shown in  Unification is an expensive operation, so the point of evaluating feature descriptions during CFG parsing has serious affects on the overall performance.",v~(v AUXV) O),,
+46547,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 5/28
+==========================================================================================
+ehy, e.g. V-kernel, V-aspect, V-moodl, V-negt, V-mood2~ and V-tease, then we have subcategorized the auxiliari~ as shown in  Unification is an expensive operation, so the point of evaluating feature descriptions during CFG parsing has serious affects on the overall performance.",706120,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"[SFP-3 -]] In converting the rule, first we have claasitied the verbal phrasal categories according to the hierar.",v~(v AUXV) O),"We have implemented two strategies for feature description evaluation: Early Unification (Step-by-step Strategy) Featnre descriptions are evaluated step-by-step, at each rule invocation in the CFG parsing. ",v~(v AUXV) O),,
+46548,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 6/28
+==========================================================================================
+We have implemented two strategies for feature description evaluation: Early Unification (Step-by-step Strategy) Featnre descriptions are evaluated step-by-step, at each rule invocation in the CFG parsing. ",706121,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"ehy, e.g. V-kernel, V-aspect, V-moodl, V-negt, V-mood2~ and V-tease, then we have subcategorized the auxiliari~ as shown in  Unification is an expensive operation, so the point of evaluating feature descriptions during CFG parsing has serious affects on the overall performance.",v~(v AUXV) O),Late Unification (Pipeline Strategy),v~(v AUXV) O),,
+46549,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 7/28
+==========================================================================================
+Late Unification (Pipeline Strategy)",706122,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"We have implemented two strategies for feature description evaluation: Early Unification (Step-by-step Strategy) Featnre descriptions are evaluated step-by-step, at each rule invocation in the CFG parsing. ",v~(v AUXV) O),Feature descriptions are evaluated when a complete CFG parse is found.,v~(v AUXV) O),,
+46550,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 8/28
+==========================================================================================
+Feature descriptions are evaluated when a complete CFG parse is found.",706123,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,Late Unification (Pipeline Strategy),v~(v AUXV) O),"The ""well-formedness"" of a parse derived from atomic CFG rules is verified by evaluating associated feature descriptions. ",v~(v AUXV) O),,
+46551,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 9/28
+==========================================================================================
+The ""well-formedness"" of a parse derived from atomic CFG rules is verified by evaluating associated feature descriptions. ",706124,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,Feature descriptions are evaluated when a complete CFG parse is found.,v~(v AUXV) O),The granularity of the phrase structnre rules is closely related to the proper selection of the evaluation strategy.,v~(v AUXV) O),,
+46552,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 10/28
+==========================================================================================
+The granularity of the phrase structnre rules is closely related to the proper selection of the evaluation strategy.",706125,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The ""well-formedness"" of a parse derived from atomic CFG rules is verified by evaluating associated feature descriptions. ",v~(v AUXV) O),"Since the atomic phrase structure rules ill the coarse-grained grammar are not so strong as to constrain syntactic structures, we have to employ the early unification to avoid a nnmber of irrelevant subparses which should have been eliminated by the evaluation of annotations.",v~(v AUXV) O),,
+46553,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 11/28
+==========================================================================================
+Since the atomic phrase structure rules ill the coarse-grained grammar are not so strong as to constrain syntactic structures, we have to employ the early unification to avoid a nnmber of irrelevant subparses which should have been eliminated by the evaluation of annotations.",706126,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The granularity of the phrase structnre rules is closely related to the proper selection of the evaluation strategy.,v~(v AUXV) O),"IIowever, since the atomic rules in the medium-grained grammar have detailed morpho-syntax specifications, they should be able to avoid irrelevant copies by using the late unification.",v~(v AUXV) O),,
+46554,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 12/28
+==========================================================================================
+IIowever, since the atomic rules in the medium-grained grammar have detailed morpho-syntax specifications, they should be able to avoid irrelevant copies by using the late unification.",706127,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Since the atomic phrase structure rules ill the coarse-grained grammar are not so strong as to constrain syntactic structures, we have to employ the early unification to avoid a nnmber of irrelevant subparses which should have been eliminated by the evaluation of annotations.",v~(v AUXV) O),We have implemented the various evaluation strategies by doing additional housekeeping in the underlying parser.,Implementing the Evaluation Strategies,,
+46555,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 13/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 1/16
+------------------------------------------------------------------------------------------
+We have implemented the various evaluation strategies by doing additional housekeeping in the underlying parser.",706128,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"IIowever, since the atomic rules in the medium-grained grammar have detailed morpho-syntax specifications, they should be able to avoid irrelevant copies by using the late unification.",v~(v AUXV) O),"The parser used here is called the Typed  Tile active chart parser and the unification algorithm are implemented in C on Sun4, which is a 10-MIPS work station.",Implementing the Evaluation Strategies,,
+46556,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 14/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 2/16
+------------------------------------------------------------------------------------------
+The parser used here is called the Typed  Tile active chart parser and the unification algorithm are implemented in C on Sun4, which is a 10-MIPS work station.",706129,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,We have implemented the various evaluation strategies by doing additional housekeeping in the underlying parser.,Implementing the Evaluation Strategies,"The unification algorithm is based oil nondestructive graph unification [Wroblewski,87], which we extend to treat negation, loop, type symbol subsumption relationships, and disjunctiou.",Implementing the Evaluation Strategies,,
+46557,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 15/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 3/16
+------------------------------------------------------------------------------------------
+The unification algorithm is based oil nondestructive graph unification [Wroblewski,87], which we extend to treat negation, loop, type symbol subsumption relationships, and disjunctiou.",706130,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The parser used here is called the Typed  Tile active chart parser and the unification algorithm are implemented in C on Sun4, which is a 10-MIPS work station.",Implementing the Evaluation Strategies,"Successive approximation [Kasper,87] is used for disjunctive feature structure unification. ",Implementing the Evaluation Strategies,,
+46558,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 16/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 4/16
+------------------------------------------------------------------------------------------
+Successive approximation [Kasper,87] is used for disjunctive feature structure unification. ",706131,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The unification algorithm is based oil nondestructive graph unification [Wroblewski,87], which we extend to treat negation, loop, type symbol subsumption relationships, and disjunctiou.",Implementing the Evaluation Strategies,The Active chart parsing algorithm basically consists of chart initialization and iterative rule invocation.,Implementing the Evaluation Strategies,,
+46559,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 17/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 5/16
+------------------------------------------------------------------------------------------
+The Active chart parsing algorithm basically consists of chart initialization and iterative rule invocation.",706132,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Successive approximation [Kasper,87] is used for disjunctive feature structure unification. ",Implementing the Evaluation Strategies,The basic part of the iterative rule invocation is shown in Figure 2.,Implementing the Evaluation Strategies,,
+46560,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 18/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 6/16
+------------------------------------------------------------------------------------------
+The basic part of the iterative rule invocation is shown in Figure 2.",706133,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The Active chart parsing algorithm basically consists of chart initialization and iterative rule invocation.,Implementing the Evaluation Strategies,AcpContinue checks the suspending condition and calls rule invocation recursivcly.,Implementing the Evaluation Strategies,,
+46561,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 19/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 7/16
+------------------------------------------------------------------------------------------
+AcpContinue checks the suspending condition and calls rule invocation recursivcly.",706134,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The basic part of the iterative rule invocation is shown in Figure 2.,Implementing the Evaluation Strategies,"AcpOneStep carries out a cycle of rule invocation which consists of getting a new pending edge (GetPendingEdge), adding it to the chart (AddEdge), combining active and inactive edges (TryToContinue-ActiveEdge/TryToContinuelnactiveEdge), and proposing new edges (ProposeProductions).",Implementing the Evaluation Strategies,,
+46562,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 20/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 8/16
+------------------------------------------------------------------------------------------
+AcpOneStep carries out a cycle of rule invocation which consists of getting a new pending edge (GetPendingEdge), adding it to the chart (AddEdge), combining active and inactive edges (TryToContinue-ActiveEdge/TryToContinuelnactiveEdge), and proposing new edges (ProposeProductions).",706135,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,AcpContinue checks the suspending condition and calls rule invocation recursivcly.,Implementing the Evaluation Strategies,"The parser stops (SatisfySuspendingCondition?) when it finds an inactive edge whose starting and ending vertex are the left-most and right-most vertex of the chart, respectively, and whose label is the start symbol of the granunar. PROC.",Implementing the Evaluation Strategies,,
+46563,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 21/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 9/16
+------------------------------------------------------------------------------------------
+The parser stops (SatisfySuspendingCondition?) when it finds an inactive edge whose starting and ending vertex are the left-most and right-most vertex of the chart, respectively, and whose label is the start symbol of the granunar. PROC.",706136,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"AcpOneStep carries out a cycle of rule invocation which consists of getting a new pending edge (GetPendingEdge), adding it to the chart (AddEdge), combining active and inactive edges (TryToContinue-ActiveEdge/TryToContinuelnactiveEdge), and proposing new edges (ProposeProductions).",Implementing the Evaluation Strategies,"OF COLING-92, NANTES, AUG. 23-28, 1992 In early unification, the feature descriptions evaluated when the edges are combined, while in late unification, they are evaluated iu the chart suspending condition check only if tile clmrt suspending condition bolds.",Implementing the Evaluation Strategies,,
+46564,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 22/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 10/16
+------------------------------------------------------------------------------------------
+OF COLING-92, NANTES, AUG. 23-28, 1992 In early unification, the feature descriptions evaluated when the edges are combined, while in late unification, they are evaluated iu the chart suspending condition check only if tile clmrt suspending condition bolds.",706137,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The parser stops (SatisfySuspendingCondition?) when it finds an inactive edge whose starting and ending vertex are the left-most and right-most vertex of the chart, respectively, and whose label is the start symbol of the granunar. PROC.",Implementing the Evaluation Strategies,"Delaying unification is implemented by adding a slot edge.parse to the edge structure, which keeps a list of the pair of active aud inactive edges constructing the edge.",Implementing the Evaluation Strategies,,
+46565,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 23/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 11/16
+------------------------------------------------------------------------------------------
+Delaying unification is implemented by adding a slot edge.parse to the edge structure, which keeps a list of the pair of active aud inactive edges constructing the edge.",706138,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"OF COLING-92, NANTES, AUG. 23-28, 1992 In early unification, the feature descriptions evaluated when the edges are combined, while in late unification, they are evaluated iu the chart suspending condition check only if tile clmrt suspending condition bolds.",Implementing the Evaluation Strategies,"If either or both of the argument feature structures of the unification have not been evaluated, they are recursively evaluated to get the target feature structure. ",Implementing the Evaluation Strategies,,
+46566,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 24/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 12/16
+------------------------------------------------------------------------------------------
+If either or both of the argument feature structures of the unification have not been evaluated, they are recursively evaluated to get the target feature structure. ",706139,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Delaying unification is implemented by adding a slot edge.parse to the edge structure, which keeps a list of the pair of active aud inactive edges constructing the edge.",Implementing the Evaluation Strategies,"It has to bc j~oted that some derivations that termhmte when feature descriptions are evaluated, may not terminate if they are ignored.",Implementing the Evaluation Strategies,,
+46567,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 25/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 13/16
+------------------------------------------------------------------------------------------
+It has to bc j~oted that some derivations that termhmte when feature descriptions are evaluated, may not terminate if they are ignored.",706140,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"If either or both of the argument feature structures of the unification have not been evaluated, they are recursively evaluated to get the target feature structure. ",Implementing the Evaluation Strategies,"For example, it is possible to write a rule for unbounded dependency like (2), in which m~ element in tile subcat feature is moved to the slash feature, to introduce slashed categories dynamically 3. ",Implementing the Evaluation Strategies,,
+46568,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 26/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 14/16
+------------------------------------------------------------------------------------------
+For example, it is possible to write a rule for unbounded dependency like (2), in which m~ element in tile subcat feature is moved to the slash feature, to introduce slashed categories dynamically 3. ",706141,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"It has to bc j~oted that some derivations that termhmte when feature descriptions are evaluated, may not terminate if they are ignored.",Implementing the Evaluation Strategies,--~ (~) (2) Ignoring feature descriptions in the rule may cause aal infinite loop.,Implementing the Evaluation Strategies,,
+46569,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 27/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 15/16
+------------------------------------------------------------------------------------------
+--~ (~) (2) Ignoring feature descriptions in the rule may cause aal infinite loop.",706142,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"For example, it is possible to write a rule for unbounded dependency like (2), in which m~ element in tile subcat feature is moved to the slash feature, to introduce slashed categories dynamically 3. ",Implementing the Evaluation Strategies,"Therefore, feature descriptions arc forced to be evaluated, when rules that cause a loop are encountered in late unification.",Implementing the Evaluation Strategies,,
+46570,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+4. v~(v AUXV) O) -- 28/28
+==========================================================================================
+0. Implementing the Evaluation Strategies -- 16/16
+------------------------------------------------------------------------------------------
+Therefore, feature descriptions arc forced to be evaluated, when rules that cause a loop are encountered in late unification.",706143,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,--~ (~) (2) Ignoring feature descriptions in the rule may cause aal infinite loop.,Implementing the Evaluation Strategies,Experiment Tile effectiveness of the strategies proposed in this paper call be judged by observing their behavior in practice.,5,,
+46571,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 1/25
+==========================================================================================
+The relationship between inlmt length and 1)arsing time with resl)CCt to grammar gramllarity is shown ill Figure 3.",706144,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Moreover, when tile mediuulgrained grauunar rules and tile late unification mode m'e combined, tile new parser runs 3.5 times fmqter than till', l/revklus olle using the coarse-grained grammar rules and the early unities|ion.",5,"Ill general, tim medimn grained ru/e.s pertormed bet, ter than the coarse grained rules.",Discussion,,
+46572,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 2/25
+==========================================================================================
+Ill general, tim medimn grained ru/e.s pertormed bet, ter than the coarse grained rules.",706145,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The relationship between inlmt length and 1)arsing time with resl)CCt to grammar gramllarity is shown ill Figure 3.,Discussion,"This 13:lldency beCOllles dearer, *is tile 8elltellee lellg].h ill~ crelmes.",Discussion,result,
+46573,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 3/25
+==========================================================================================
+This 13:lldency beCOllles dearer, *is tile 8elltellee lellg].h ill~ crelmes.",706146,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Ill general, tim medimn grained ru/e.s pertormed bet, ter than the coarse grained rules.",Discussion,This reslllLs from the redllction of disjunc.. tiw!,Discussion,error,
+46574,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 4/25
+==========================================================================================
+This reslllLs from the redllction of disjunc.. tiw!",706147,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"This 13:lldency beCOllles dearer, *is tile 8elltellee lellg].h ill~ crelmes.",Discussion,feature descriptions whose computational cost in-,Discussion,error,
+46575,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 5/25
+==========================================================================================
+feature descriptions whose computational cost in-",706148,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,This reslllLs from the redllction of disjunc.. tiw!,Discussion,"However, we occasionally encounter sentences which are parsed faster using coarse-grained rules rather than medium-grained rules.",Discussion,error,
+46576,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 6/25
+==========================================================================================
+However, we occasionally encounter sentences which are parsed faster using coarse-grained rules rather than medium-grained rules.",706149,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,feature descriptions whose computational cost in-,Discussion,This is because the increase in the atomic CFG parsing cost exceeds the reduction of tbe unification cost. ,Discussion,result,
+46577,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 7/25
+==========================================================================================
+This is because the increase in the atomic CFG parsing cost exceeds the reduction of tbe unification cost. ",706150,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"However, we occasionally encounter sentences which are parsed faster using coarse-grained rules rather than medium-grained rules.",Discussion,The relationship between input length and parsing time with respect to unification evaluation mode is shown in Figure 4.,Discussion,result,
+46578,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 8/25
+==========================================================================================
+The relationship between input length and parsing time with respect to unification evaluation mode is shown in Figure 4.",706151,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,This is because the increase in the atomic CFG parsing cost exceeds the reduction of tbe unification cost. ,Discussion,This shows that the late unification mode is significantly more efficient than the early unification mode.,Discussion,,
+46579,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 9/25
+==========================================================================================
+This shows that the late unification mode is significantly more efficient than the early unification mode.",706152,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The relationship between input length and parsing time with respect to unification evaluation mode is shown in Figure 4.,Discussion,"It also shows that the parsing time in the late unification mode seems to be lmlynomial (not exponential) in the input length, while that in the early unification mode varies widely and irregnlarly.",Discussion,result,
+46580,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 10/25
+==========================================================================================
+It also shows that the parsing time in the late unification mode seems to be lmlynomial (not exponential) in the input length, while that in the early unification mode varies widely and irregnlarly.",706153,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,This shows that the late unification mode is significantly more efficient than the early unification mode.,Discussion,"This is because the parsing time in tile late unification mode is mainly predominated by the cost of atomic CFG parsing by dclaying unification, whereas the parsing tiule in the early unification mode is mainly predominated by the cost of unification. ",Discussion,result,
+46581,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 11/25
+==========================================================================================
+This is because the parsing time in tile late unification mode is mainly predominated by the cost of atomic CFG parsing by dclaying unification, whereas the parsing tiule in the early unification mode is mainly predominated by the cost of unification. ",706154,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"It also shows that the parsing time in the late unification mode seems to be lmlynomial (not exponential) in the input length, while that in the early unification mode varies widely and irregnlarly.",Discussion,We have demonstrated tbc effectiveness of combining medium-grained phrase structure rules with late unification.,Discussion,result,
+46582,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 12/25
+==========================================================================================
+We have demonstrated tbc effectiveness of combining medium-grained phrase structure rules with late unification.",706155,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"This is because the parsing time in tile late unification mode is mainly predominated by the cost of atomic CFG parsing by dclaying unification, whereas the parsing tiule in the early unification mode is mainly predominated by the cost of unification. ",Discussion,Experiment results suggest that new prospective techniques for speeding up ratificationbased parsing exist. ,Discussion,result,
+46583,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 13/25
+==========================================================================================
+Experiment results suggest that new prospective techniques for speeding up ratificationbased parsing exist. ",706156,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,We have demonstrated tbc effectiveness of combining medium-grained phrase structure rules with late unification.,Discussion,"The first is automatic transformation of phrase structure rules, which converts disjunctions in the feature descriptions into atomic phrase structure rifles.",Discussion,result,
+46584,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 14/25
+==========================================================================================
+The first is automatic transformation of phrase structure rules, which converts disjunctions in the feature descriptions into atomic phrase structure rifles.",706157,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,Experiment results suggest that new prospective techniques for speeding up ratificationbased parsing exist. ,Discussion,"Some disjunctions such as subcat slash scrambling are so reguhu"" that it seems possible to exl)and them into a set of CF(; rules using forlnal i)rocedures.",Discussion,result,
+46585,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 15/25
+==========================================================================================
+Some disjunctions such as subcat slash scrambling are so reguhu"" that it seems possible to exl)and them into a set of CF(; rules using forlnal i)rocedures.",706158,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"The first is automatic transformation of phrase structure rules, which converts disjunctions in the feature descriptions into atomic phrase structure rifles.",Discussion,"If the grammar compiler can perform this kind of transformation automatically, we can gain efficiency without losing grammar maintainability. ",Discussion,result,
+46586,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 16/25
+==========================================================================================
+If the grammar compiler can perform this kind of transformation automatically, we can gain efficiency without losing grammar maintainability. ",706159,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Some disjunctions such as subcat slash scrambling are so reguhu"" that it seems possible to exl)and them into a set of CF(; rules using forlnal i)rocedures.",Discussion,The second is feature-sensitive lazy unification.,Discussion,result,
+46587,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 17/25
+==========================================================================================
+The second is feature-sensitive lazy unification.",706160,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"If the grammar compiler can perform this kind of transformation automatically, we can gain efficiency without losing grammar maintainability. ",Discussion,"Unilication is used for both huihling up a structure using infornratiou-propugat, ion and blocking rule a Fplication using constraint-checking.",Discussion,result,
+46588,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 18/25
+==========================================================================================
+Unilication is used for both huihling up a structure using infornratiou-propugat, ion and blocking rule a Fplication using constraint-checking.",706161,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The second is feature-sensitive lazy unification.,Discussion,"If the grammar compiler can separately output those features for constraint-checking such ~ syntactic llcatnrcs, and those for information-propagation such as semantic rel)resental;ions , irrelevant subparses can be pruned efficiently by evaluating the constraint-checking features first.",Discussion,result,
+46589,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 19/25
+==========================================================================================
+If the grammar compiler can separately output those features for constraint-checking such ~ syntactic llcatnrcs, and those for information-propagation such as semantic rel)resental;ions , irrelevant subparses can be pruned efficiently by evaluating the constraint-checking features first.",706162,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Unilication is used for both huihling up a structure using infornratiou-propugat, ion and blocking rule a Fplication using constraint-checking.",Discussion,"Unification is an associative and comnm-tative operation, so the same results from the featuresensitive lazy unification are assured. ",Discussion,result,
+46590,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 20/25
+==========================================================================================
+Unification is an associative and comnm-tative operation, so the same results from the featuresensitive lazy unification are assured. ",706163,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"If the grammar compiler can separately output those features for constraint-checking such ~ syntactic llcatnrcs, and those for information-propagation such as semantic rel)resental;ions , irrelevant subparses can be pruned efficiently by evaluating the constraint-checking features first.",Discussion,The third is parallel implementation of a unification-based parser based on late unification (pipe-line strategy).,Discussion,result,
+46591,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 21/25
+==========================================================================================
+The third is parallel implementation of a unification-based parser based on late unification (pipe-line strategy).",706164,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Unification is an associative and comnm-tative operation, so the same results from the featuresensitive lazy unification are assured. ",Discussion,"In early unification (step-by-step strategy), it is hard to perform parsing in parallel because the CFG parsing process and the unification process depend strongly on each other.",Discussion,result,
+46592,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 22/25
+==========================================================================================
+In early unification (step-by-step strategy), it is hard to perform parsing in parallel because the CFG parsing process and the unification process depend strongly on each other.",706165,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The third is parallel implementation of a unification-based parser based on late unification (pipe-line strategy).,Discussion,"However, both processes are completely separated in the pipe-line strategy .",Discussion,result,
+46593,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 23/25
+==========================================================================================
+However, both processes are completely separated in the pipe-line strategy .",706166,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"In early unification (step-by-step strategy), it is hard to perform parsing in parallel because the CFG parsing process and the unification process depend strongly on each other.",Discussion,"Therefore, it is easy to introduce the existing parallel algorithms to both CFG parsing and unification.",Discussion,result,
+46594,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 24/25
+==========================================================================================
+Therefore, it is easy to introduce the existing parallel algorithms to both CFG parsing and unification.",706167,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"However, both processes are completely separated in the pipe-line strategy .",Discussion,"It is estimated that most feature descriptions can be evaluated in parallel, at least, at the ]exical level, because unification-based grammars such as IIPSG derive phrase structure by iteratively propagating the local constraints.",Discussion,result,
+46595,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+6. Discussion -- 25/25
+==========================================================================================
+It is estimated that most feature descriptions can be evaluated in parallel, at least, at the ]exical level, because unification-based grammars such as IIPSG derive phrase structure by iteratively propagating the local constraints.",706168,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"Therefore, it is easy to introduce the existing parallel algorithms to both CFG parsing and unification.",Discussion,"]n this paper, we have proposed two techniques for implementing an efficient unification-based parsing system, which, when combined, significantly improve the overall performance.",Conclusion,result,
+46596,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 1/7
+==========================================================================================
+]n this paper, we have proposed two techniques for implementing an efficient unification-based parsing system, which, when combined, significantly improve the overall performance.",706169,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"It is estimated that most feature descriptions can be evaluated in parallel, at least, at the ]exical level, because unification-based grammars such as IIPSG derive phrase structure by iteratively propagating the local constraints.",Discussion,The first is changing the granularity of the context-free phrase structure rules into medium-grained rules.,Conclusion,contribution-AIC#result,
+46597,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 2/7
+==========================================================================================
+The first is changing the granularity of the context-free phrase structure rules into medium-grained rules.",706170,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,"]n this paper, we have proposed two techniques for implementing an efficient unification-based parsing system, which, when combined, significantly improve the overall performance.",Conclusion,This enables us to reduce the amount of unification for feature descriptions without intractably increasing the number of phrase structure rules.,Conclusion,contribution-AIC,
+46598,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 3/7
+==========================================================================================
+This enables us to reduce the amount of unification for feature descriptions without intractably increasing the number of phrase structure rules.",706171,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The first is changing the granularity of the context-free phrase structure rules into medium-grained rules.,Conclusion,The second is late unification in which the unification for feature descriptions is delayed until a complete CFG parse is found.,Conclusion,result,
+46599,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 4/7
+==========================================================================================
+The second is late unification in which the unification for feature descriptions is delayed until a complete CFG parse is found.",706172,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,This enables us to reduce the amount of unification for feature descriptions without intractably increasing the number of phrase structure rules.,Conclusion,This saves unnecessary copies of feature structures which are wasted for irrelevant subparses. ,Conclusion,contribution-AIC,
+46600,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 5/7
+==========================================================================================
+This saves unnecessary copies of feature structures which are wasted for irrelevant subparses. ",706173,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,The second is late unification in which the unification for feature descriptions is delayed until a complete CFG parse is found.,Conclusion,We have tested the time behavior of the parsing system using two granunars of different granularity (coarse/medium) and two different strategies for invoking unification (early/late).,Conclusion,contribution-AIC,
+46601,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 6/7
+==========================================================================================
+We have tested the time behavior of the parsing system using two granunars of different granularity (coarse/medium) and two different strategies for invoking unification (early/late).",706174,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,This saves unnecessary copies of feature structures which are wasted for irrelevant subparses. ,Conclusion,"It is proved that, on average, late unification using medium-grained rules parses 3.5 times fester than the previous early unification using coarse-grained rules.",Conclusion,,
+46602,"An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System
+==========================================================================================
+7. Conclusion -- 7/7
+==========================================================================================
+It is proved that, on average, late unification using medium-grained rules parses 3.5 times fester than the previous early unification using coarse-grained rules.",706175,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,We have tested the time behavior of the parsing system using two granunars of different granularity (coarse/medium) and two different strategies for invoking unification (early/late).,Conclusion,,,result,
+46603,"==========================================================================================
+Annotator feedback
+==========================================================================================
+
+You just finished annotating the article entitled <<An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System>>. Please answer following questions: 
+
+1. Do you think that this article was difficult to understand, in a way that may have affected the quality of your annotations, because of its technicity / because it handles subjects you are unfamiliar with ?
+
+Please add any label of your choice if your answer is yes.",706175,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,,,,,context-AIC,
+46604,"==========================================================================================
+Annotator feedback
+==========================================================================================
+
+You just finished annotating the article entitled <<An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System>>. Please answer following questions: 
+
+2. Do you think that this article was difficult to understand, in a way that may have affected the quality of your annotations, because of its writing style / structure / parsing errors ?
+
+Please add any label of your choice if your answer is yes.",706175,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,,,,,context-AIC,
+46605,"==========================================================================================
+Annotator feedback
+==========================================================================================
+
+You just finished annotating the article entitled <<An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System>>. Please answer following questions: 
+
+3. Did you know / read the article before this annotation task, or do you think you have identified its authors ?
+
+Please add any label of your choice if your answer is yes.",706175,An Empirical Study on Rule Granularity and Unification Interleaving Toward an Efficient Unification-Based Parsing System,"0. abstract
+1. Introduction
+2. • Granunar representation and organizati(m • Interaction between CFG parsing and unilication
+3. The HPSG-Based Japanese Grammars
+4. v~(v AUXV) O)
+5. 5
+6. Discussion
+7. Conclusion
+",1992,,,,,,
