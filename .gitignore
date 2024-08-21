@@ -15,3 +15,8 @@ arxiv-metadata-oai-snapshot.json
 
 *.pkl
 *.zip
+cdb-idx*.json
+ARCHIVE/
+brouillon.ipynb
+
+grobid*/
