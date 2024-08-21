@@ -34,6 +34,24 @@ class Corpus:
 
         return nlp
     
+    def to_dict(self):
+        """Return a dictionary representation of the corpus"""
+        return {
+            "name": self.name,
+            "xml_dir_path": self.xml_dir_path,
+            "metadata_path": self.metadata_path,
+            "papers": [p.to_dict() for p in self.papers],
+            "papers_with_errors": [p.to_dict() for p in self.papers_with_errors]
+        }
+    
+    @classmethod
+    def from_dict(cls, d:dict):
+        """Create a Corpus object from a dictionary representation"""
+        corpus = cls(xml_dir_path = d["xml_dir_path"], metadata_path = d["metadata_path"], name = d["name"])
+        corpus.papers = [utils.Paper.Paper.from_dict(p, c = corpus) for p in d["papers"]]
+        corpus.papers_with_errors = [utils.Paper.Paper.from_dict(p, c = corpus) for p in d["papers_with_errors"]]
+        return corpus
+    
     def get_paper_by_id(self, id:str):
         """Get a paper by its id"""
         # we assume that the id is unique

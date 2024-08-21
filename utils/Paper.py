@@ -1,5 +1,5 @@
 import utils.Corpus
-import utils.Author
+from utils.Author import Author
 import pandas as pd
 import tqdm
 import json
@@ -20,7 +20,7 @@ class Paper:
     NON_CAND_SECTIONS = ["related ", "prior", "background", "overview", "method", "setup", "setting", "parameter", "hyperparameter",
                      "training data", "validation data", "implement", "data", "example", "acknowledgement","appendix", "supplement", ]
 
-    def __init__(self, d: dict = None, c = None):
+    def __init__(self, d: dict = None, c = None, json = False):
         """Initialize the paper from a metadata dictionary and a corpus object"""
 
         # Paper information
@@ -33,7 +33,6 @@ class Paper:
         self.num_citedby = None
         self.corpus = None
         self.xml_path = None
-        self.corpus = None
 
         # Paper content
         self.abstract = None
@@ -44,7 +43,7 @@ class Paper:
         # Errors
         self.init_error = None
         
-        if c is not None:
+        if c is not None and json is False:
             self.corpus = c
 
             ## ACL corpus
@@ -110,8 +109,49 @@ class Paper:
             # Other corpus       
             else:
                 pass
-                
+
+            
             self.content, self.sections, self.nb_ref, self.init_error = self.load_content_from_xml(self.xml_path, self.abstract)
+
+    def to_dict(self):
+        """Return a dictionary representation of the paper"""
+        # check if 
+        d = {"title": self.title,
+             "id": self.id,
+             "authors": [a.to_dict() if isinstance(a, Author) else None for a in self.authors],
+             "year": self.year,
+             "publisher": self.publisher,
+             "category": self.category,
+             "num_citedby": self.num_citedby,
+             "corpus": self.corpus.name,
+             "xml_path": self.xml_path,
+             "abstract": self.abstract,
+             "content": self.content.to_dict() if isinstance(self.content, pd.DataFrame) else None,
+             "sections": self.sections,
+             "nb_ref": self.nb_ref,
+             "init_error": self.init_error
+            }
+        return d
+    
+    @classmethod
+    def from_dict(cls, d:dict, c = None):
+        """Create a Paper object from a dictionary representation"""
+        paper = cls(c = c, json = True)
+        paper.title = d["title"]
+        paper.id = d["id"]
+        paper.authors = [utils.Author.Author.from_dict(a) for a in d["authors"]]
+        paper.year = d["year"]
+        paper.publisher = d["publisher"]
+        paper.category = d["category"]
+        paper.num_citedby = d["num_citedby"]
+        paper.corpus = d["corpus"]
+        paper.xml_path = d["xml_path"]
+        paper.abstract = d["abstract"]
+        paper.content = pd.DataFrame(d["content"])
+        paper.sections = d["sections"]
+        paper.nb_ref = d["nb_ref"]
+        paper.init_error = d["init_error"]
+        return paper
 
 
     def load_content_from_xml(self, xml_file:str, abstract:str) -> Tuple[pd.DataFrame, dict, int, str]:

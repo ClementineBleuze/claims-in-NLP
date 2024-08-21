@@ -47,6 +47,17 @@ class Author:
         self.norm_names = [] # list of author names after normalization of special characters (str)
         self.others = others # other information about the author (str) e.g affiliation, email, etc.
 
+    def to_dict(self):
+        return {
+            "names": self.names,
+            "norm_names": self.norm_names,
+            "others": self.others
+        }
+    
+    @classmethod
+    def from_dict(cls, d:dict):
+        return cls(names = d["names"], others = d["others"])
+
     def normalize_names(self):
         """Normalize the author names by mapping special characters to their corresponding "basuc" characters"""
         norm_names = []
