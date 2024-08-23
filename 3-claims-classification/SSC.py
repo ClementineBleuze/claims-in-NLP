@@ -26,7 +26,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(device)
 
 # connect to huggingface
-login(token = "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", add_to_git_credential = True)
+HF_TOKEN = ""
+login(token = HF_TOKEN, add_to_git_credential = True)
 
 with open("train_eval_test_datasets_PLM4SSC.pkl", "rb") as f:
     d = pickle.load(f)
@@ -87,7 +88,8 @@ class SSCModel(nn.Module):
             # in case we miss some separators (ie if the 3 sentences have more than 512 tokens, we truncate on the right and replace the last tokens with [SEP]
             missing_SEP = self.nb_sentences - len(ids)
             if missing_SEP > 0:
-               	tokenized_input_mod = torch.clone(tokenized_input.input_ids)
+                tokenized_input_mod = torch.clone(tokenized_input.input_ids)
+                   
             for i in range(missing_SEP):
                 tokenized_input_mod[bi][512 - 1 - i] = 103
                 ids.append(512 - 1 - i)

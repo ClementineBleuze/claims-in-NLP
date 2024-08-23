@@ -26,7 +26,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(device)
 
 # connect to Huggingface
-login(token = "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", add_to_git_credential = True)
+HF_TOKEN = ""
+login(token = HF_TOKEN, add_to_git_credential = True)
 
 # data loading
 with open("data/train_final.pkl", "rb") as f:
